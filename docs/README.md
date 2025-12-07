@@ -2,9 +2,9 @@
 
 ESE5190 Final Project - Team: Poet-of-Post-Office
 
-Team Member: Tiao Yu, MutianYuan, Lige Tan
+Team Member: Tiao Yu, Mutian Yuan, Lige Tan
 
-TA: Praise Ndlovu
+TA: Praise Ndlovu1
 
 # 1. Final project Video
 
