@@ -8,7 +8,7 @@ You can find our project video by clicking this [link](https://drive.google.com/
 
 <div style="display:flex; justify-content:center; margin:20px 0;">
   <video style="max-width:960px; width:100%;" controls>
-    <source src="./video/team18glove.mp4" type="video/mp4">
+    <source src="./video/glove.mp4" type="video/mp4">
   </video>
 </div>
 
