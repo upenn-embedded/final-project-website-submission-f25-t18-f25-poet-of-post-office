@@ -1,0 +1,10 @@
+title: "Iron Man's Healthy Glove"
+description: "ESE5190 Final Project - Team: Poet-of-Post-Office"
+
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+
