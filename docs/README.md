@@ -8,7 +8,7 @@ TA: Praise Ndlovu
 
 # 1. Final project Video
 
-You can find our project video by clicking this [link](https://drive.google.com/file/d/1OxCNUOv104NPlGW3K9_btHVaHvuEmDWO/view?usp=drive_link) or watching the video below:
+You can find our project video by clicking this [link](https://drive.google.com/file/d/1AGv__O5X_WSkikyQ7JaI45YAZ8d5JuMV/view?usp=drive_link) or watching the video below:
 
 <div style="display:flex; justify-content:center; margin:20px 0;">
   <video style="max-width:960px; width:100%;" controls>
@@ -25,11 +25,23 @@ You can find our project video by clicking this [link](https://drive.google.com/
   <img src="./image/FINAL_glove3.png" style="width:400px;max-height:400px; border-radius:6px;">
 </div>
 
-# 3. Result
+# 3. System Diagram and Implementation
+
+<div style="display:flex; justify-content:center; margin:20px 0;">
+  <img src="./image/Newblockdiagram.png"
+       style="width:600px; max-height:600px; border-radius:6px;">
+</div>
+
+<div style="display:flex; justify-content:center; margin:20px 0;">
+  <img src="./image/NewHardware.png"
+       style="width:600px; max-height:600px; border-radius:6px;">
+</div>
+
+# 4. Result
 
 The final system successfully delivers the classic functions of Iron Man's gloves, including both the palm-cannon (PALM) and fist (FIST) maneuvers. By integrating ADCs with state-machine logic, the gloves can interpret the bending of three flex sensors to generate a 3-bit gesture code, enabling reliable recognition of gestures such as OK (010), Pointing (101), and Victory (100), with corresponding outputs shown on the LCD. Additionally, the system achieves real-time heart-rate monitoring through timers and interrupts, providing continuous on-device health feedback. The IoT functionality is also fully implemented: the ESP32 automatically connects to Wi-Fi using stored credentials or presents a provisioning page when needed, and a status server updates key information—such as current gesture, detected voice command, and system parameters—on the HTTP dashboard.
 
-# 4. Softeware Requirements Specification
+# 5. Softeware Requirements Specification
 
 | ID     |                                                                                                                                                                                          Description                                                                                                                                                                                          | Validation Outcome                                                                                                                                                                                       |
 | ------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,7 +53,7 @@ The final system successfully delivers the classic functions of Iron Man's glove
 | SRS-06 |                                                                                                            The ESP32 shall correctly record microphone audio through I2S,  execute keyword-spotting inference (“Jarvis” vs. “Other”) using the deployed TFLite Micro model.                                                                                                            | **Partially Confirmed.** The full audio pipeline is verified functional: I2S recording works, ring buffer is stable. However, the model that are deployed does not maintain satisfactory accuracy. |
 | SRS-07 | The ESP32 shall host a Wi-Fi provisioning AP with an embedded webpage for scanning available networks and entering credentials. After provisioning, the ESP32 shall switch to STA mode, auto-connect to the saved Wi-Fi credentials, and store IP information. Once STA is connected, the ESP32 shall run a simple HTTP status server displaying mode, detected voice, and gesture values. | **Confirmed.** AP mode launches successfully; The web dashboard loads at the assigned IP, updates via  JSON polling, and reflects changes from both KWS and ATmega UART data.                     |
 
-# 5. Hardware Requirements Specification
+# 6. Hardware Requirements Specification
 
 | ID     | Description                                                                                               |                                                                                                                                 Validation Outcome                                                                                                                                 |
 | :----- | --------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -51,7 +63,7 @@ The final system successfully delivers the classic functions of Iron Man's glove
 | HRS-04 | LCD                                                                                                       |                                                  **Achieved.** As shown in the video and pictures above, LCD can display real-time and accurate information about different gestures as well as the heart rate at all times                                                  |
 | HRS-05 | Laser                                                                                                     |                                                                                 **Fell**. Taking into account power and security issues, we did not choose to use laser as suggested by TA.                                                                                 |
 
-# 6. Conclusion
+# 7. Conclusion
 
 We learned a lot about taking a system from block diagram to real hardware and firmware. Technically, the biggest lessons were about sharing limited resources on a small MCU: multiplexing several flex sensors and a pulse sensor on the ATmega328PB's ADC, writing timing-critical WS2812 drivers in C, and building a simple but robust UI layer on top of these low-level modules. Generally, we also got practice thinking in terms of data paths instead of single features. In addition, the ability to work collaboratively as a team has also been greatly enhanced.
 
