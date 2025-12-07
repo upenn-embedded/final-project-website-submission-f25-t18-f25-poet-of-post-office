@@ -2,6 +2,10 @@
 
 ESE5190 Final Project - Team: Poet-of-Post-Office
 
+Team Member: Tiao Yu, MutianYuan, Lige Tan
+
+TA: Praise Ndlovu
+
 # 1. Final project Video
 
 You can find our project video by clicking this [link](https://drive.google.com/file/d/1OxCNUOv104NPlGW3K9_btHVaHvuEmDWO/view?usp=drive_link) or watching the video below:
@@ -14,11 +18,11 @@ You can find our project video by clicking this [link](https://drive.google.com/
 
 # 2. Final projects Images
 
-<div style="display:flex; gap:20px; justify-content:center; margin:20px 0;">
-  <img src="./image/FIST.jpg" style="max-height:250px; border-radius:6px;">
-  <img src="./image/Final_glove1.jpg" style="max-height:250px; border-radius:6px;">
-  <img src="./image/Final_glove2.jpg" style="max-height:250px; border-radius:6px;">
-  <img src="./image/FINAL_glove3.png" style="max-height:250px; border-radius:6px;">
+<div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:20px; margin:20px 0;">
+  <img src="./image/FIST.jpg" style="width:400px;max-height:400px; border-radius:6px;">
+  <img src="./image/Final_glove1.jpg" style="width:400px;max-height:400px; border-radius:6px;">
+  <img src="./image/Final_glove2.jpg" style="width:400px;max-height:400px; border-radius:6px;">
+  <img src="./image/FINAL_glove3.png" style="width:400px;max-height:400px; border-radius:6px;">
 </div>
 
 # 3. Result
@@ -39,13 +43,13 @@ The final system successfully delivers the classic functions of Iron Man's glove
 
 # 5. Hardware Requirements Specification
 
-| ID                    | Description                                                                                                                                                                                                                                                                  |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Flex Sensor           | Achieved. Based on the state-machine logic and use of ADC, the work of flex sensor achieved our expected requirements<br />as you can see in the video and images above.                                                                                                     |
-| Heart Rate Sensor     | Almost achieved.It can detect the heart rate in real time and send the data back. Most of the time, the heart rate reading is<br />quite normal. However, sometimes it may be a little higher than the actual situation. We speculate that this is due to the contact issue. |
-| LED Stripe & LED Ring | Achieved. As shown in the video and pictures above, the light ring on the palm and the light strips on the arm are all functioning properly.                                                                                                                                 |
-| LCD                   | Achieved. As shown in the video and pictures above, LCD can display real-time and accurate information about different gestures as well<br />as the heart rate at all times.                                                                                                |
-| Laser                 | Fell. Taking into account power and security issues, we did not choose to use laser as suggested by TA.                                                                                                                                                                     |
+| ID     | Description                                                                                               |                                                                                                                                 Validation Outcome                                                                                                                                 |
+| :----- | --------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| HRS-01 | Flex Sensor.  Used to obtain information about the degree of finger bending and perform 3-bit encoding. |                                                    **Achieved**. Based on the state-machine logic and use of ADC, the work of flex sensor achieved our expected requirements as you can see in the video and images above                                                    |
+| HRS-02 | Heart Rate Sensor. Used for real-time detection and transmission of heart rate                           | **Almost Achieved.**  It can detect the heart rate in real time and send data back. Most of the time, the heart rate reading is quite normal. However, sometimes it may be a little higher than the actual situation. We speculate that this is due to the contact issue.  |
+| HRS-03 | LED Stripe & LED Ring                                                                                     |                                                               **Achieved.** As shown in the video and pictures above, the light ring on the palm and the light strips on the arm are all functioning properly.                                                               |
+| HRS-04 | LCD                                                                                                       |                                                  **Achieved.** As shown in the video and pictures above, LCD can display real-time and accurate information about different gestures as well as the heart rate at all times                                                  |
+| HRS-05 | Laser                                                                                                     |                                                                                 **Fell**. Taking into account power and security issues, we did not choose to use laser as suggested by TA.                                                                                 |
 
 # 6. Conclusion
 
