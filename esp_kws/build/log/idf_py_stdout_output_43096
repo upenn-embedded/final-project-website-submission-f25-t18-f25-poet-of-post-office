@@ -1,0 +1,1837 @@
+Command: C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Tao\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\mcu\voice\esp_kws\build\esp_kws.elf C:\mcu\voice\esp_kws\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Tao\esp\v5.5\esp-idf\tools\idf.py' '-p' 'COM9'
+[0;32mI (114) esp_image: segment 1: paddr=000367b4 vaddr=3fc9bc00 size 00008000 (32 KiBESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 20:34:15[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2678ch (157580) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=000367b4 vaddr=3fc9bc00 size=04ac4h ( 19140) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=0003b280 vaddr=40374000 size=04d98h ( 19864) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=be2cch (778956) map[0m
+[0;32mI (263) esp_image: segment 4: paddr=000fe2f4 vaddr=40378d98 size=12d6ch ( 77164) load[0m
+[0;32mI (280) esp_image: segment 5: paddr=00111068 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (289) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (290) boot: Disabling RNG early entropy source...[0m
+[0;32mI (300) cpu_start: Multicore app[0m
+[0;32mI (309) cpu_start: Pro cpu start user code[0m
+[0;32mI (310) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (310) app_init: Application information:[0m
+[0;32mI (310) app_init: Project name:     esp_kws[0m
+[0;32mI (314) app_init: App version:      1[0m
+[0;32mI (317) app_init: Compile time:     Dec  4 2025 20:33:57[0m
+[0;32mI (322) app_init: ELF file SHA256:  2a5820fa6...[0m
+[0;32mI (326) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (330) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (334) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (338) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (342) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (348) heap_init: At 3FCD7068 len 000126A8 (73 KiB): RAM[0m
+[0;32mI (353) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (358) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (363) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (370) spi_flash: detected chip: boya[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;32mI (375) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (381) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (398) main_task: Calling app_main()[0m
+[0;32mI (398) APP: ESP KWS + WiFi + UART starting...[0m
+[0;32mI (398) APP: Removed IDLE0 from task watchdog[0m
+[1;31mE (408) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (408) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (408) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (418) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (418) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (428) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (438) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (438) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (448) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (448) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (458) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (458) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (468) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (468) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (478) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (478) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (488) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (488) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (498) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (498) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (508) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (508) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (518) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (518) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (528) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (528) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (538) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (538) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (558) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (558) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (568) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (568) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (578) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (578) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (588) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (588) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (598) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (598) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (608) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (608) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (618) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (618) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (628) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (628) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (638) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (638) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (648) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (658) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (658) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (678) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (678) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (688) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (688) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (698) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (698) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (708) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (708) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (708) pp: pp rom version: e7ae62f[0m
+[1;31mE (718) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (718) net80211: net80211 rom version: e7ae62f[0m
+[1;31mE (728) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (738) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (738) wifi:wifi driver task: 3fced4c0, prio:23, stack:6656, core=0[0m
+[1;31mE (748) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (748) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (758) wifi:wifi firmware version: f3dbad7[0m
+[1;31mE (758) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (758) wifi:wifi certification version: v7.0[0m
+[1;31mE (768) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (768) wifi:config NVS flash: enabled[0m
+[1;31mE (778) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (778) wifi:config nano formatting: disabled[0m
+[1;31mE (788) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (788) wifi:Init data frame dynamic rx buffer num: 32[0m
+[1;31mE (798) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[1;31mE (808) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (808) wifi:Init management short buffer num: 32[0m
+[0;32mI (818) wifi:Init dynamic tx buffer num: 32[0m
+[1;31mE (818) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (818) wifi:Init static tx FG buffer num: 2[0m
+[1;31mE (828) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (828) wifi:Init static rx buffer size: 1600[0m
+[1;31mE (838) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (838) wifi:Init static rx buffer num: 10[0m
+[1;31mE (848) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (848) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (858) wifi_init: rx ba win: 6[0m
+[1;31mE (858) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (858) wifi_init: accept mbox: 6[0m
+[0;32mI (868) wifi_init: tcpip mbox: 32[0m
+[1;31mE (868) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (868) wifi_init: udp mbox: 6[0m
+[1;31mE (878) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (878) wifi_init: tcp mbox: 6[0m
+[0;32mI (888) wifi_init: tcp tx win: 5760[0m
+[1;31mE (888) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (888) wifi_init: tcp rx win: 5760[0m
+[1;31mE (898) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (898) wifi_init: tcp mss: 1440[0m
+[0;32mI (908) wifi_init: WiFi IRAM OP enabled[0m
+[1;31mE (908) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (908) wifi_init: WiFi RX IRAM OP enabled[0m
+[1;31mE (918) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (918) APP: WiFi state -> 1[0m
+[1;31mE (928) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (928) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (938) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (938) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (948) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (948) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[1;31mE (958) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (958) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (968) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (968) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (978) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (978) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (988) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (988) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (998) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (998) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1008) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1008) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1018) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1018) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1028) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1028) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1038) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1038) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1048) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1048) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1058) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1068) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1068) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1078) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1078) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1088) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1088) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1098) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1098) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1108) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1108) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1118) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1118) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1128) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1128) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1138) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1138) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1148) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1158) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1168) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (1178) wifi:mode : sta (10:51:db:82:4b:34)[0m
+[0;32mI (1178) wifi:enable tsf[0m
+[1;31mE (1178) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (1178) wifi_conn: STA: Connecting to SSID=keyituo ...[0m
+[1;31mE (1188) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1198) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1208) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1218) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1228) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1238) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1248) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1258) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1268) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1278) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1288) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1298) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1308) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1318) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1328) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1338) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1348) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1358) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1368) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1378) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1388) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1398) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1408) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1418) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1428) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1438) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1448) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1458) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1468) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1478) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1488) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1498) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1508) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1518) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1528) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1538) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1558) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1568) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1578) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1588) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1598) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1608) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1618) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1628) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1638) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1648) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1658) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1678) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1688) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1698) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1708) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1718) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1728) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1738) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1748) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1758) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1768) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1778) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1788) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1798) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1808) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1818) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1828) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1838) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1848) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1858) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1868) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (1878) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1878) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (1878) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (1878) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (1888) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (1898) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (1898) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1908) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1918) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1928) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1938) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1948) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1958) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1968) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1978) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1988) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (1998) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2008) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2018) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2028) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2038) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2048) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2058) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2068) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2078) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2088) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2098) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2108) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2118) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2128) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2138) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2148) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2158) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2168) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2178) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2188) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2198) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2208) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2218) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2228) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2238) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2248) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2258) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2268) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2278) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2288) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2298) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2308) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2318) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2328) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2338) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2348) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2358) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2368) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2378) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2388) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2398) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2408) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2418) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2428) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2438) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2448) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2458) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2468) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (2478) wifi:connected with keyituo, aid = 1, channel 6, BW20, bssid = 0e:76:8e:6b:00:72[0m
+[0;32mI (2478) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[1;31mE (2478) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (2478) wifi:pm start, type: 1[0m
+
+[1;31mE (2488) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2498) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (2488) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[1;31mE (2508) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (2508) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[1;31mE (2518) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2528) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (2528) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[1;31mE (2538) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2558) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2568) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2578) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2588) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2598) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2608) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2618) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2628) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2638) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2648) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2658) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2678) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2688) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2698) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2708) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2718) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2728) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2738) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2748) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2758) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2768) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2778) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2788) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2798) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2808) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2818) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2828) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2838) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2848) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2858) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2868) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2878) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2888) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2898) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2908) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2918) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2928) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2938) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2948) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2958) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2968) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2978) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2988) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (2998) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3008) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3018) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3028) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3038) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3048) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3058) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3068) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3078) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3088) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3098) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3108) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3118) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3128) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3138) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3148) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3158) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3168) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3178) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3188) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3198) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3208) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3218) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3228) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3238) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3248) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3258) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3268) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3278) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3288) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3298) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3308) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3318) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3328) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3338) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3348) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3358) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3368) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3378) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3388) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3398) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3408) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3418) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3428) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3438) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3448) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3458) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3468) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3478) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3488) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3498) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3508) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3518) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3528) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3538) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3548) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (3548) wifi_conn: GOT_IP 172.20.10.2[0m
+[0;32mI (3548) wifi_conn: GOT_IP 172.20.10.2[0m
+[1;31mE (3548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3548) APP: WiFi state -> 2[0m
+[1;31mE (3558) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3558) status_server: status server started on port 80[0m
+[1;31mE (3568) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3568) APP: Initializing I2S...[0m
+[0;32mI (3578) APP: I2S initialized: 16000 Hz[0m
+[1;31mE (3578) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3578) APP: UART initialized: port=1, TX=4, RX=5[0m
+[1;31mE (3588) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3588) KWS: Initializing TFLite Micro...[0m
+[1;31mE (3598) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3598) KWS: TFLM initialized. Input dims:[0m
+ 1 49 40 1
+[0;32mI (3608) APP: kws_task started (continuous detection)[0m
+[1;31mE (3608) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3618) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3608) APP: uart_rx_task started[0m
+[1;31mE (3628) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (3608) main_task: Returned from app_main()[0m
+[1;31mE (3638) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3648) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3648) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3658) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3678) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3678) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3688) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3698) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3698) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3708) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3708) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3718) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3728) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3728) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3738) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3738) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3748) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3758) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3758) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3768) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3768) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3778) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3788) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3788) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3798) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3798) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3808) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3818) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3818) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3828) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3828) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3838) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3848) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3848) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3858) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3858) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3868) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3878) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3878) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3888) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3888) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3898) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3908) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3908) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3918) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3918) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3928) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3938) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3938) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3948) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3948) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3958) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3968) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3968) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3978) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3978) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3988) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3998) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (3998) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4008) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4008) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4018) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4028) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4028) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4038) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4038) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4048) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4058) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4058) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4068) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4068) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4078) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4088) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4088) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4098) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4098) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4108) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4118) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4118) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4128) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4128) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4138) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4148) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4148) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4158) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4158) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4168) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4178) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4178) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4188) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4188) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4198) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4208) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4208) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4218) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4218) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4228) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4238) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4238) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4248) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4248) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4258) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4268) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4268) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4278) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4278) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4288) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4298) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4298) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4308) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4308) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4318) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4328) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4328) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4338) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4338) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4348) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4358) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4358) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4368) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4368) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4378) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4388) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4388) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4398) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4398) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4408) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4418) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4418) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4428) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4428) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4438) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4448) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4448) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4458) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4458) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4468) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4478) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4478) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4488) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4488) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4498) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4508) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4508) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4518) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4518) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4528) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4538) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4538) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4548) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4558) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4568) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4568) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4578) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4578) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4588) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4598) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4598) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4608) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4608) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4618) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4628) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4628) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4638) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4638) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4648) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4658) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4658) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4668) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4678) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4688) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4688) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[1;31mE (4698) task_wdt: esp_task_wdt_reset(707): task not found[0m
+[0;32mI (4908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (5108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (5318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (5528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (5728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (5938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (6148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (6348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (6558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (6758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (6968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (7178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (7378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (7588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (7788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (7998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (8208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (8408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (8618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (8828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (9028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (9238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (9438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (9648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (9698) wifi:<ba-add>idx:0 (ifx:0, 0e:76:8e:6b:00:72), tid:0, ssn:2, winSize:64[0m
+[0;32mI (9858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (10068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (10268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (10478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (10678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (10888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (11098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (11298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (11508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (11718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (11918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (12128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (12328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (12538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (12748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (12948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (13158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (13358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (13568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (13778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (13978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (14188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (14398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (14598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (14808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (15008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (15218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (15428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (15628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (15838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (16038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (16248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (16458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (16658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (16868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (17078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (17278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (17488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (17688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (17898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (18108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (18308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (18518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (18718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (18928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (19138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (19338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (19548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (19748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (19958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (20168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (20368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (20578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (20788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (20988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (21198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (21398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (21608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (21818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (22018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (22228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (22428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (22638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (22848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (23048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (23258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (23468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (23668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (23878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (24078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (24288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (24498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (24708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (24918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (25128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (25328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (25538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (25748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (25948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (26158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (26368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (26568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (26778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (26978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (27188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (27398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (27598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (27808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (28008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (28218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (28428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (28628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (28838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (29048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (29248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (29458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (29658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (29868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (30078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (30278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (30488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (30698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (30898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (31108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (31308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (31518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (31728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (31928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (32138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (32338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (32548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (32758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (32958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (33168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (33378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (33578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (33788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (33988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (34198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (34408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (34608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (34818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (35028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (35228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (35438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (35638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (35848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (36058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (36258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (36468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (36678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (36878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (37088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (37288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (37498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (37708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (37908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (38118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (38318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (38528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (38738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (38938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (39148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (39358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (39558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (39768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (39968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (40178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (40388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (40588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (40798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (41008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (41208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (41418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (41618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (41828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (42038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (42238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (42448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (42658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (42858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (43068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (43268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (43478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (43688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (43888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (44098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (44298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (44508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (44718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (44918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (45128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (45338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (45538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (45748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (45948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (46158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (46368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (46568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (46778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (46978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (47188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (47398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (47598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (47808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (48018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (48218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (48428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (48628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (48838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (49048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (49248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (49458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (49668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (49868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (50078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (50278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (50488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (50698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (50898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (51108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (51318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (51518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (51728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (51928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (52138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (52348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (52548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (52758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (52968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (53168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (53378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (53588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (53788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (53998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (54198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (54408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (54618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (54818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (55028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (55238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (55438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (55648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (55858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (56058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (56268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (56468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (56678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (56888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (57088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (57298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (57508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (57708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (57918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (58118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (58328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (58538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (58738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (58948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (59148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (59358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (59568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (59768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (59978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (60188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (60388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (60598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (60798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (61008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (61218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (61418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (61628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (61838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (62038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (62248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (62448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (62658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (62868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (63068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (63278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (63488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (63688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (63898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (64098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (64308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (64518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (64718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (64928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (65138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (65338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (65548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (65748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (65958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (66168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (66368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (66578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (66778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (66988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (67198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (67398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (67608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (67818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (68018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (68228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (68428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (68638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (68848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (69048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (69258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (69468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (69668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (69878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (70088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (70288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (70498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (70698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (70908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (71118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (71318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (71528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (71738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (71938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (72148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (72348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (72558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (72768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (72968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (73178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (73378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (73588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (73798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (73998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (74208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (74418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (74618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (74828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (75028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (75238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (75448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (75648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (75858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (76068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (76268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (76478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (76678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (76888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (77098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (77298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (77508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (77708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (77918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (78128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (78328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (78538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (78748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (78948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (79158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (79358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (79568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (79778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (79978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (80188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (80398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (80598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (80808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (81008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (81218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (81428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (81628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (81838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (82048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (82248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (82458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (82658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (82868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (83078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (83278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (83488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (83698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (83898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (84108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (84308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (84518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (84738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (84938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (85148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (85358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (85558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (85768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (85968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (86178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (86388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (86588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (86798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (86998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (87208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (87418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (87618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (87828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (88038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (88238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (88448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (88648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (88858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (89068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (89268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (89478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (89688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (89888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (90098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (90298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (90508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (90718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (90918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (91128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (91338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (91538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (91748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (91948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (92158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (92368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (92568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (92778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (92978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (93188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (93398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (93598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (93808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (94018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (94218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (94428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (94628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (94838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (95048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (95248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (95458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (95668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (95868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (96078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (96278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (96488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (96698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (96898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (97108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (97318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (97518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (97728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (97928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (98138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (98348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (98548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (98758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (98968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (99168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (99378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (99578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (99788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (99998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (100198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (100408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (100618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (100818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (101028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (101228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (101438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (101648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (101848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (102058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (102258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (102468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (102678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (102878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (103088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (103298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (103498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (103708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (103908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (104118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (104328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (104528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (104738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (104938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (105148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (105358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (105558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (105768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (105978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (106178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (106388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (106588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (106798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (107008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (107208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (107418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (107628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (107828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (108038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (108238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (108448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (108658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (108858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (109068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (109278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (109478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (109688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (109888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (110098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (110308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (110508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (110718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (110928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (111128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (111338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (111548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (111748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (111958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (112158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (112368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (112578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (112778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (112988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (113198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (113398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (113608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (113808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (114018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (114228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (114428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (114638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (114848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (115048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (115258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (115458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (115668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (115878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (116078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (116288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (116488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (116698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (116908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (117108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (117318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (117528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (117728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (117938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (118138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (118348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (118558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (118758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (118968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (119178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (119378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (119588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (119788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (119998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (120208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (120408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (120618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (120828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (121028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (121238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (121438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (121648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (121858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (122058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (122268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (122478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (122678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (122888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (123088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (123298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (123508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (123708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (123918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (124128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (124328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (124538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (124748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (124948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (125158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (125368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (125568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (125778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (125978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (126188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (126398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (126598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (126808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (127018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (127218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (127428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (127638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (127838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (128048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (128248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (128458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (128668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (128868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (129078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (129288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (129488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (129698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (129908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (130108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (130318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (130518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (130728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (130938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (131138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (131348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (131558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (131758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (131968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (132178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (132378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (132588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (132788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (132998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (133208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (133408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (133618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (133818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (134028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (134238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (134438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (134648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (134858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (135058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (135268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (135468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (135678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (135888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (136088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (136298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (136498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (136708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (136918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (137118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (137328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (137538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (137738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (137948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (138148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (138358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (138568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (138768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (138978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (139188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (139388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (139598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (139798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (140008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (140218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (140418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (140628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (140838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (141038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (141248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (141448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (141658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (141868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (142068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (142278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (142488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (142688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (142898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (143098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (143308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (143518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (143718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (143928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (144138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (144338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (144548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (144758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (144968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (145178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (145378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (145588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (145798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (145998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (146208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (146408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (146618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (146828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (147028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (147238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (147448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (147648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (147858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (148058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (148268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (148478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (148678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (148888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (149088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (149298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (149508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (149708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (149918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (150128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (150328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (150538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (150738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (150948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (151158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (151358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (151568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (151778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (151978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (152188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (152388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (152598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (152808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (153008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (153218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (153428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (153628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (153838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (154038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (154248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (154458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (154658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (154868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (155078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (155278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (155488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (155688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (155898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (156108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (156308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (156518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (156728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (156928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (157138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (157338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (157548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (157758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (157958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (158168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (158368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (158578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (158788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (158988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (159198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (159408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (159608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (159818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (160018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (160228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (160438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (160638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (160848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (161058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (161258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (161468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (161668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (161878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (162088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (162288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (162498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (162698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (162908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (163118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (163318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (163528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (163738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (163938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (164148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (164348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (164558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (164768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (164968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (165178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (165388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (165588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (165798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (165998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (166208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (166418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (166618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (166828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (167038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (167238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (167448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (167648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (167858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (168068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (168268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (168478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (168688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (168888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (169098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (169298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (169508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (169718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (169918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (170128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (170328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (170538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (170748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (170948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (171158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (171368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (171568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (171778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (171988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (172188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (172398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (172598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (172808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (173018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (173218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (173428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (173638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (173838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (174048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (174258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (174458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (174668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (174878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (175078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (175288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (175488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (175698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (175908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (176108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (176318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (176518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (176728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (176938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (177138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (177348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (177558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (177758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (177968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (178168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (178378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (178588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (178788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (178998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (179198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (179408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (179618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (179818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (180028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (180238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (180438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (180648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (180848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (181058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (181268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (181468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (181678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (181888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (182088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (182298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (182498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (182708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (182918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (183118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (183328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (183528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (183738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (183948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (184148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (184358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (184568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (184768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (184978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (185178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (185388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (185598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (185798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (186008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (186218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (186418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (186628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (186828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (187038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (187248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (187448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (187658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (187858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (188068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (188278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (188478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (188688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (188898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (189098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (189308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (189508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (189718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (189928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (190128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (190338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (190548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (190748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (190958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (191158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (191368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (191578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (191778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (191988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (192198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (192398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (192608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (192808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (193018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (193228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (193428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (193638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (193848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (194048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (194258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (194458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (194668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (194878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (195078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (195288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (195498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (195698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (195908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (196108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (196318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (196528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (196728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (196938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (197138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (197348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (197558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (197758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (197968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (198178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (198378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (198588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (198788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (198998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (199208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (199408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (199618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (199828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (200028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (200238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (200438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (200648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (200858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (201058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (201268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (201478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (201678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (201888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (202088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (202298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (202508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (202708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (202918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (203128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (203328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (203538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (203738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (203948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (204158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (204358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (204578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (204778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (204988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (205198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (205398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (205608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (205818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (206018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (206228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (206428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (206638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (206848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (207048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (207258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (207468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (207668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (207878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (208078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (208288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (208498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (208698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (208908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (209108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (209318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (209528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (209728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (209938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (210148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (210348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (210558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (210758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (210968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (211178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (211378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (211588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (211798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (211998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (212208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (212408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (212618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (212828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (213028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (213238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (213448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (213648) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (213858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (214058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (214268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (214478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (214678) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (214888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (215098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (215298) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (215508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (215708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (215918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (216128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (216328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (216538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (216748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (216948) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (217158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (217358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (217568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (217778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (217978) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (218188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (218388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (218598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (218808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (219008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (219218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (219428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (219628) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (219838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (220038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (220248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (220458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (220658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (220868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (221078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (221278) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (221488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (221688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (221898) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (222108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (222308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (222518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (222718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (222928) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (223138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (223338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (223548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (223758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (223958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (224168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (224368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (224578) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (224788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (224988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (225198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (225408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (225608) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (225818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (226018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (226228) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (226438) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (226638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (226848) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (227058) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (227258) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (227468) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (227668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (227878) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (228088) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (228288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (228498) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (228708) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (228908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (229118) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (229328) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (229528) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (229738) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (229938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (230148) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (230358) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (230558) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (230768) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (230968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (231178) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (231388) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (231588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (231798) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (232008) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (232208) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (232418) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (232618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (232828) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (233038) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (233238) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (233448) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (233658) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (233858) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (234068) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (234268) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (234478) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (234688) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (234888) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (235098) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (235308) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (235508) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (235718) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (235918) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (236128) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (236338) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (236538) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (236748) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (236958) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (237158) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (237368) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (237568) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (237778) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (237988) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (238188) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (238398) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (238598) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (238808) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (239018) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (239218) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (239428) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (239638) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (239838) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (240048) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (240248) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (240458) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (240668) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (240868) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (241078) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (241288) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (241488) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (241698) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (241908) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (242108) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (242318) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (242518) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (242728) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (242938) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (243138) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (243348) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (243548) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (243758) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (243968) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (244168) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (244378) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (244588) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (244788) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (244998) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (245198) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (245408) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (245618) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (245818) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m
+[0;32mI (246028) APP: Prediction: 1 (Other)  scores[0]=0.004 scores[1]=0.996[0m

@@ -1,0 +1,6 @@
+{
+    "idf.portWin": "COM8",
+    "files.associations": {
+        "stdint.h": "c"
+    }
+}

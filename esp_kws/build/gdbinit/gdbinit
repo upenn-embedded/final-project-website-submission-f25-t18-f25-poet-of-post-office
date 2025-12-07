@@ -1,0 +1,2 @@
+source C:/mcu/voice/esp_kws/build/gdbinit/symbols
+source C:/mcu/voice/esp_kws/build/gdbinit/connect

@@ -1,0 +1,7 @@
+source "C:/Users/Tao/esp/v5.5/esp-idf/components/bootloader/Kconfig.projbuild"
+source "C:/Users/Tao/esp/v5.5/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "C:/Users/Tao/esp/v5.5/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "C:/Users/Tao/esp/v5.5/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "C:/Users/Tao/esp/v5.5/esp-idf/components/partition_table/Kconfig.projbuild"
+source "C:/mcu/voice/esp_kws/main/Kconfig.projbuild"
+source "C:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/Kconfig.projbuild"

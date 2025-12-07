@@ -1,0 +1,335 @@
+Command: C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Tao\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\mcu\voice\esp_kws\build\esp_kws.elf C:\mcu\voice\esp_kws\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Tao\esp\v5.5\esp-idf\tools\idf.py' '-p' 'COM9'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420bcf36
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 20:34:15[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=266fch (157436) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=00036724 vaddr=3fc9bc00 size=04ac4h ( 19140) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=0003b1f0 vaddr=40374000 size=04e28h ( 20008) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=be0ech (778476) map[0m
+[0;32mI (262) esp_image: segment 4: paddr=000fe114 vaddr=40378e28 size=12cdch ( 77020) load[0m
+[0;32mI (280) esp_image: segment 5: paddr=00110df8 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (289) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (289) boot: Disabling RNG early entropy source...[0m
+[0;32mI (300) cpu_start: Multicore app[0m
+[0;32mI (309) cpu_start: Pro cpu start user code[0m
+[0;32mI (309) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (310) app_init: Application information:[0m
+[0;32mI (310) app_init: Project name:     esp_kws[0m
+[0;32mI (313) app_init: App version:      1[0m
+[0;32mI (317) app_init: Compile time:     Dec  4 2025 20:33:57[0m
+[0;32mI (322) app_init: ELF file SHA256:  407a8e534...[0m
+[0;32mI (326) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (330) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (334) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (338) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (341) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (348) heap_init: At 3FCD7068 len 000126A8 (73 KiB): RAM[0m
+[0;32mI (353) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (358) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (363) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (370) spi_flash: detected chip: boya[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;32mI (375) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (381) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (398) main_task: Calling app_main()[0m
+[0;32mI (398) APP: ESP KWS + WiFi + UART starting...[0m
+[0;32mI (408) pp: pp rom version: e7ae62f[0m
+[0;32mI (408) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (428) wifi:wifi driver task: 3fced4d4, prio:23, stack:6656, core=0[0m
+[0;32mI (428) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (428) wifi:wifi certification version: v7.0[0m
+[0;32mI (428) wifi:config NVS flash: enabled[0m
+[0;32mI (428) wifi:config nano formatting: disabled[0m
+[0;32mI (438) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (438) wifi:Init management short buffer num: 32[0m
+[0;32mI (448) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (448) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (458) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (458) wifi:Init static rx buffer num: 10[0m
+[0;32mI (468) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (468) wifi_init: rx ba win: 6[0m
+[0;32mI (468) wifi_init: accept mbox: 6[0m
+[0;32mI (468) wifi_init: tcpip mbox: 32[0m
+[0;32mI (478) wifi_init: udp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp tx win: 5760[0m
+[0;32mI (488) wifi_init: tcp rx win: 5760[0m
+[0;32mI (488) wifi_init: tcp mss: 1440[0m
+[0;32mI (488) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (498) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (498) APP: WiFi state -> 1[0m
+[0;32mI (498) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (548) wifi:mode : sta (10:51:db:82:4b:34)[0m
+[0;32mI (548) wifi:enable tsf[0m
+[0;32mI (548) wifi_conn: STA: Connecting to SSID=keyituo ...[0m
+[0;32mI (1348) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1348) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1358) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1368) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1428) wifi:connected with keyituo, aid = 1, channel 6, BW20, bssid = 0e:76:8e:6b:00:72[0m
+[0;32mI (1428) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (1428) wifi:pm start, type: 1[0m
+
+[0;32mI (1438) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1438) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1468) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2478) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2478) wifi_conn: GOT_IP 172.20.10.2[0m
+[0;32mI (2478) wifi_conn: GOT_IP 172.20.10.2[0m
+[0;32mI (2478) APP: WiFi state -> 2[0m
+[0;32mI (2488) status_server: status server started on port 80[0m
+[0;32mI (2488) APP: Initializing I2S...[0m
+[0;32mI (2488) APP: I2S initialized: 16000 Hz[0m
+[0;32mI (2488) APP: UART initialized: port=1, TX=4, RX=5[0m
+[0;32mI (2498) KWS: Initializing TFLite Micro...[0m
+[0;32mI (2508) KWS: TFLM initialized. Input dims:[0m
+ 1 49 40 1
+[0;32mI (2508) APP: kws_task started (continuous detection)[0m
+[0;32mI (2508) APP: uart_rx_task started[0m
+[0;32mI (2518) main_task: Returned from app_main()[0m
+[0;32mI (3048) wifi:<ba-add>idx:0 (ifx:0, 0e:76:8e:6b:00:72), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3758) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (3968) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (4178) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (4388) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (4588) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (4798) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (5008) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (5218) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (5428) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (5628) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (5838) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (6048) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (6258) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (6458) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (6668) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (6878) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (7088) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (7288) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (7498) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (7708) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (7908) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (8118) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (8328) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (8538) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[1;31mE (8558) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (8558) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (8558) task_wdt: Tasks currently running:[0m
+[1;31mE (8558) task_wdt: CPU 0: kws_task[0m
+[1;31mE (8558) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (8558) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x420329B6:0x3FC9DFA0 0x42032DCC:0x3FC9DFC0 0x40377731:0x3FC9DFF0 0x42098785:0x3FCF1DB0 0x42098096:0x3FCF1DE0 0x4200E315:0x3FCF1E10 0x4200DEAC:0x3FCF28E0 0x4037DF49:0x3FCF3180
+
+[0;32mI (8778) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (8978) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (9188) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (9398) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (9608) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (9808) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (10018) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (10228) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (10438) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (10638) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (10848) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (11058) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (11258) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (11468) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (11678) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (11888) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (12088) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (12298) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (12508) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (12708) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (12918) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (13128) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (13338) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (13538) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[1;31mE (13558) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (13558) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (13558) task_wdt: Tasks currently running:[0m
+[1;31mE (13558) task_wdt: CPU 0: kws_task[0m
+[1;31mE (13558) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (13558) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x420329B6:0x3FC9DFA0 0x42032DCC:0x3FC9DFC0 0x40377731:0x3FC9DFF0 0x4200E293:0x3FCF1E10 0x4200DEAC:0x3FCF28E0 0x4037DF49:0x3FCF3180
+
+[0;32mI (13778) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (13988) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (14198) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (14398) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (14608) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (14818) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (15028) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (15228) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (15438) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (15648) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (15858) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (16068) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (16268) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (16478) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (16688) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (16898) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (17098) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (17308) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (17518) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (17728) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (17928) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (18138) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (18348) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (18558) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[1;31mE (18558) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (18558) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (18558) task_wdt: Tasks currently running:[0m
+[1;31mE (18558) task_wdt: CPU 0: kws_task[0m
+[1;31mE (18558) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (18558) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x420329B6:0x3FC9DFA0 0x42032DCC:0x3FC9DFC0 0x40377731:0x3FC9DFF0 0x420987B8:0x3FCF1D90 0x420981AA:0x3FCF1DD0 0x4200E267:0x3FCF1E10 0x4200DEAC:0x3FCF28E0 0x4037DF49:0x3FCF3180
+
+[0;32mI (18798) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (19008) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (19208) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (19418) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (19628) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (19838) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (20038) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (20248) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (20458) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (20668) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (20868) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (21078) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (21288) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (21498) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (21698) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (21908) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (22118) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (22318) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (22528) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (22738) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (22948) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (23148) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (23358) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[1;31mE (23558) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (23558) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (23558) task_wdt: Tasks currently running:[0m
+[1;31mE (23558) task_wdt: CPU 0: kws_task[0m
+[1;31mE (23558) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (23558) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x420329B6:0x3FC9DFA0 0x42032DCC:0x3FC9DFC0 0x40377731:0x3FC9DFF0 0x42013B11:0x3FCF26B0 0x42014872:0x3FCF2710 0x420137A1:0x3FCF2830 0x42024D76:0x3FCF2850 0x4200FD66:0x3FCF2880 0x4200E4D9:0x3FCF28A0 0x4200DED6:0x3FCF28E0 0x4037DF49:0x3FCF3180
+
+[0;32mI (23608) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (23818) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (24018) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (24228) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (24438) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (24648) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (24848) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (25058) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (25268) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (25478) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (25678) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (25888) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (26098) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (26308) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (26508) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (26718) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (26928) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (27138) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (27338) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (27548) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (27758) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (27958) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (28168) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (28378) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[1;31mE (28558) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (28558) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (28558) task_wdt: Tasks currently running:[0m
+[1;31mE (28558) task_wdt: CPU 0: kws_task[0m
+[1;31mE (28558) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (28558) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x420329B6:0x3FC9DFA0 0x42032DCC:0x3FC9DFC0 0x40377731:0x3FC9DFF0 0x4202FA20:0x3FCF21E0 0x4202E491:0x3FCF2230 0x4201DFEE:0x3FCF2300 0x42024D76:0x3FCF2850 0x4200FD66:0x3FCF2880 0x4200E4D9:0x3FCF28A0 0x4200DED6:0x3FCF28E0 0x4037DF49:0x3FCF3180
+
+[0;32mI (28628) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (28828) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (29038) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (29248) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (29458) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (29668) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (29868) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (30078) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (30288) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (30498) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (30708) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (30918) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (31118) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (31328) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (31538) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (31748) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (31958) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (32158) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (32368) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (32578) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (32788) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (32988) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (33198) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (33408) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[1;31mE (33558) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (33558) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (33558) task_wdt: Tasks currently running:[0m
+[1;31mE (33558) task_wdt: CPU 0: kws_task[0m
+[1;31mE (33558) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (33558) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x420329B6:0x3FC9DFA0 0x42032DCC:0x3FC9DFC0 0x40377731:0x3FC9DFF0 0x4202FA1D:0x3FCF21E0 0x4202E491:0x3FCF2230 0x4201DFEE:0x3FCF2300 0x42024D76:0x3FCF2850 0x4200FD66:0x3FCF2880 0x4200E4D9:0x3FCF28A0 0x4200DED6:0x3FCF28E0 0x4037DF49:0x3FCF3180
+
+[0;32mI (33658) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (33858) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (34068) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (34278) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (34488) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (34698) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (34898) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (35108) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (35318) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (35528) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (35728) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (35938) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (36148) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (36358) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (36568) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (36768) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (36978) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m
+[0;32mI (37188) APP: Prediction: 1 (Other)  scores[0]=0.000 scores[1]=0.996[0m

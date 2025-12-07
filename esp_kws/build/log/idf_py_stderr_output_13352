@@ -1,0 +1,284 @@
+Command: C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Tao\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\mcu\voice\esp_kws\build\esp_kws.elf C:\mcu\voice\esp_kws\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Tao\esp\v5.5\esp-idf\tools\idf.py' '-p' 'COM9'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM9 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM9 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x420bcf3c: [0;33mmain_task[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m164[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4209835f: [0;33m__kernel_cosf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/kf_cos.c[0m[0m:[1;31m55[0m
+[0m--- 0x420981d3: [0;33mcosf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/sf_cos.c[0m[0m:[1;31m44[0m
+[0m--- 0x4200e267: [0;33maf_compute_log_mel[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/audio_frontend.c[0m[0m:[1;31m42[0m
+[0m--- 0x4200deac: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m303[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f965: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m143[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f96e: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m147[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x40056124: [0;33m__divsf3[0m[0m in [0;32mROM[0m
+[0m--- 0x4200e261: [0;33maf_compute_log_mel[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/audio_frontend.c[0m[0m:[1;31m42[0m
+[0m--- 0x4200deac: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m303[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4209833a: [0;33m__kernel_cosf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/kf_cos.c[0m[0m:[1;31m48[0m
+[0m--- 0x420981d3: [0;33mcosf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/sf_cos.c[0m[0m:[1;31m44[0m
+[0m--- 0x4200e267: [0;33maf_compute_log_mel[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/audio_frontend.c[0m[0m:[1;31m42[0m
+[0m--- 0x4200deac: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m303[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x42098911: [0;33m__ieee754_rem_pio2f[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/ef_rem_pio2.c[0m[0m:[1;31m170[0m
+[0m--- 0x420981aa: [0;33mcosf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/sf_cos.c[0m[0m:[1;31m40[0m
+[0m--- 0x4200e267: [0;33maf_compute_log_mel[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/audio_frontend.c[0m[0m:[1;31m42[0m
+[0m--- 0x4200deac: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m303[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f968: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m145[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202fa2d: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m232[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f968: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m145[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f9a4: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m170[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f957: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m134[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202e412: [0;33mesp_nn_aligned_s8_pad_with_value[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/common/common_functions.h[0m[0m:[1;31m185[0m
+[0m--- (inlined by) [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m257[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f98c: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m158[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f962: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m142[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202db5e: [0;33mesp_nn_add_elementwise_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/basic_math/esp_nn_add_s8_esp32s3.S[0m[0m:[1;31m255[0m
+[0m--- 0x4201b397: [0;33mtflite::EvalAddQuantized(TfLiteContext*, TfLiteNode*, TfLiteAddParams*, tflite::OpDataAdd const*, TfLiteEvalTensor const*, TfLiteEvalTensor const*, TfLiteEvalTensor*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/add.cc[0m[0m:[1;31m135[0m
+[0m--- 0x4201bcf2: [0;33mtflite::AddEval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/add.cc[0m[0m:[1;31m219[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f98a: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m158[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f98c: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m158[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f99f: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m168[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4202f9af: [0;33mesp_nn_conv_s8_filter_aligned_input_padded_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_filter_aligned_input_padded_esp32s3.S[0m[0m:[1;31m177[0m
+[0m--- 0x4202e491: [0;33mesp_nn_conv_s8_esp32s3[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c[0m[0m:[1;31m263[0m
+[0m--- 0x4201dfee: [0;33mtflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m256[0m
+[0m--- (inlined by) [0;33mEval[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc[0m[0m:[1;31m371[0m
+[0m--- 0x42024d76: [0;33mtflite::MicroInterpreterGraph::InvokeSubgraph(int)[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc[0m[0m:[1;31m277[0m
+[0m--- 0x4200fd66: [0;33mtflite::MicroInterpreter::Invoke()[0m[0m at [0;32mC:/mcu/voice/esp_kws/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc[0m[0m:[1;31m294[0m
+[0m--- 0x4200e4d9: [0;33mkws_infer_one[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/kws_inference.cpp[0m[0m:[1;31m144[0m
+[0m--- 0x4200ded6: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x42008131: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x42009075: [0;33muart_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m245[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a6abe: [0;33mwrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c[0m[0m:[1;31m11[0m
+[0m--- 0x4200c235: [0;33mconsole_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_vfs_console/vfs_console.c[0m[0m:[1;31m83[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a63b6: [0;33m__swrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c[0m[0m:[1;31m94[0m
+[0m--- 0x420a57d5: [0;33m__sflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m224[0m
+[0m--- 0x420a5826: [0;33m_fflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m278[0m
+[0m--- 0x420a5e25: [0;33m__sfvwrite_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c[0m[0m:[1;31m251[0m
+[0m--- 0x420a38af: [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m429[0m
+[0m--- (inlined by) [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m399[0m
+[0m--- 0x420a32b6: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m1774[0m
+[0m--- 0x420a642d: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x40384743: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x4200df5d: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m319[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x42008131: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x42009075: [0;33muart_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m245[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a6abe: [0;33mwrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c[0m[0m:[1;31m11[0m
+[0m--- 0x4200c235: [0;33mconsole_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_vfs_console/vfs_console.c[0m[0m:[1;31m83[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a63b6: [0;33m__swrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c[0m[0m:[1;31m94[0m
+[0m--- 0x420a57d5: [0;33m__sflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m224[0m
+[0m--- 0x420a5826: [0;33m_fflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m278[0m
+[0m--- 0x420a5e25: [0;33m__sfvwrite_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c[0m[0m:[1;31m251[0m
+[0m--- 0x420a38af: [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m429[0m
+[0m--- (inlined by) [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m399[0m
+[0m--- 0x420a32b6: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m1774[0m
+[0m--- 0x420a642d: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x40384743: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x4200df5d: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m319[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x42008131: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x42009075: [0;33muart_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m245[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a6abe: [0;33mwrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c[0m[0m:[1;31m11[0m
+[0m--- 0x4200c235: [0;33mconsole_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_vfs_console/vfs_console.c[0m[0m:[1;31m83[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a63b6: [0;33m__swrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c[0m[0m:[1;31m94[0m
+[0m--- 0x420a57d5: [0;33m__sflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m224[0m
+[0m--- 0x420a5826: [0;33m_fflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m278[0m
+[0m--- 0x420a5e25: [0;33m__sfvwrite_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c[0m[0m:[1;31m251[0m
+[0m--- 0x420a38af: [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m429[0m
+[0m--- (inlined by) [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m399[0m
+[0m--- 0x420a32b6: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m1774[0m
+[0m--- 0x420a642d: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x40384743: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x4200df5d: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m319[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x403782a6: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40377731: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x42008131: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x42009075: [0;33muart_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m245[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a6abe: [0;33mwrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c[0m[0m:[1;31m11[0m
+[0m--- 0x4200c235: [0;33mconsole_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/esp_vfs_console/vfs_console.c[0m[0m:[1;31m83[0m
+[0m--- 0x4200cd4a: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/vfs/vfs.c[0m[0m:[1;31m982[0m
+[0m--- 0x420a63b6: [0;33m__swrite[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c[0m[0m:[1;31m94[0m
+[0m--- 0x420a57d5: [0;33m__sflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m224[0m
+[0m--- 0x420a5826: [0;33m_fflush_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c[0m[0m:[1;31m278[0m
+[0m--- 0x420a5e25: [0;33m__sfvwrite_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c[0m[0m:[1;31m251[0m
+[0m--- 0x420a38af: [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m429[0m
+[0m--- (inlined by) [0;33m__sprint_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m399[0m
+[0m--- 0x420a32b6: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m1774[0m
+[0m--- 0x420a642d: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x40384743: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x4200df5d: [0;33mkws_task(void*)[0m[0m at [0;32mC:/mcu/voice/esp_kws/main/main.cpp[0m[0m:[1;31m319[0m
+[0m--- 0x4037df49: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/Tao/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

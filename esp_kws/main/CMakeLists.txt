@@ -1,0 +1,21 @@
+idf_component_register(
+    SRCS
+        "main.cpp"
+        "audio_frontend.c"
+        "kws_inference.cpp"
+        "model_data.cc"
+        "wifi_connect.c"
+        "Status_server.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        esp-tflite-micro
+        driver
+        esp_timer
+        esp_system
+        esp_hw_support
+        esp_rom
+        esp_wifi
+        esp_netif
+        esp_http_server
+        nvs_flash
+)

@@ -1,0 +1,543 @@
+Command: C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Tao\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\mcu\voice\esp_kws\build\esp_kws.elf C:\mcu\voice\esp_kws\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Tao\esp\v5.5\esp-idf\tools\idf.py' '-p' 'COM9'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x420bd068
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 20:34:15[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2671ch (157468) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=00036744 vaddr=3fc9bc00 size=04ac4h ( 19140) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=0003b210 vaddr=40374000 size=04e08h ( 19976) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=be218h (778776) map[0m
+[0;32mI (263) esp_image: segment 4: paddr=000fe240 vaddr=40378e08 size=12cfch ( 77052) load[0m
+[0;32mI (280) esp_image: segment 5: paddr=00110f44 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (289) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (289) boot: Disabling RNG early entropy source...[0m
+[0;32mI (300) cpu_start: Multicore app[0m
+[0;32mI (309) cpu_start: Pro cpu start user code[0m
+[0;32mI (309) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (310) app_init: Application information:[0m
+[0;32mI (310) app_init: Project name:     esp_kws[0m
+[0;32mI (313) app_init: App version:      1[0m
+[0;32mI (317) app_init: Compile time:     Dec  4 2025 20:33:57[0m
+[0;32mI (322) app_init: ELF file SHA256:  66474beac...[0m
+[0;32mI (326) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (330) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (334) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (338) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (341) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (348) heap_init: At 3FCD7068 len 000126A8 (73 KiB): RAM[0m
+[0;32mI (353) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (358) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (363) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (369) spi_flash: detected chip: boya[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;32mI (375) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (381) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (398) main_task: Calling app_main()[0m
+[0;32mI (398) APP: ESP KWS + WiFi + UART starting...[0m
+[0;32mI (408) pp: pp rom version: e7ae62f[0m
+[0;32mI (408) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (428) wifi:wifi driver task: 3fced4d4, prio:23, stack:6656, core=0[0m
+[0;32mI (428) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (428) wifi:wifi certification version: v7.0[0m
+[0;32mI (428) wifi:config NVS flash: enabled[0m
+[0;32mI (428) wifi:config nano formatting: disabled[0m
+[0;32mI (438) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (438) wifi:Init management short buffer num: 32[0m
+[0;32mI (448) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (448) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (458) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (458) wifi:Init static rx buffer num: 10[0m
+[0;32mI (468) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (468) wifi_init: rx ba win: 6[0m
+[0;32mI (468) wifi_init: accept mbox: 6[0m
+[0;32mI (468) wifi_init: tcpip mbox: 32[0m
+[0;32mI (478) wifi_init: udp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp tx win: 5760[0m
+[0;32mI (488) wifi_init: tcp rx win: 5760[0m
+[0;32mI (488) wifi_init: tcp mss: 1440[0m
+[0;32mI (488) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (498) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (498) APP: WiFi state -> 1[0m
+[0;32mI (498) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (548) wifi:mode : sta (10:51:db:82:4b:34)[0m
+[0;32mI (548) wifi:enable tsf[0m
+[0;32mI (548) wifi_conn: STA: Connecting to SSID=keyituo ...[0m
+[0;32mI (1248) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1248) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1248) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1258) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1448) wifi:connected with keyituo, aid = 1, channel 6, BW20, bssid = 0e:76:8e:6b:00:72[0m
+[0;32mI (1448) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (1448) wifi:pm start, type: 1[0m
+
+[0;32mI (1448) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1458) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1548) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2498) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2498) wifi_conn: GOT_IP 172.20.10.2[0m
+[0;32mI (2498) wifi_conn: GOT_IP 172.20.10.2[0m
+[0;32mI (2498) APP: WiFi state -> 2[0m
+[0;32mI (2498) status_server: status server started on port 80[0m
+[0;32mI (2508) APP: Initializing I2S...[0m
+[0;32mI (2508) APP: I2S initialized: 16000 Hz[0m
+[0;32mI (2508) APP: UART initialized: port=1, TX=4, RX=5[0m
+[0;32mI (2518) KWS: Initializing TFLite Micro...[0m
+[0;32mI (2528) KWS: TFLM initialized. Input dims:[0m
+ 1 49 40 1
+[0;32mI (2528) APP: kws_task started[0m
+[0;32mI (2528) APP: uart_rx_task started[0m
+[0;32mI (2528) main_task: Returned from app_main()[0m
+[0;32mI (8108) wifi:<ba-add>idx:0 (ifx:0, 0e:76:8e:6b:00:72), tid:0, ssn:2, winSize:64[0m
+[0;32mI (19868) APP: VAD: speech start (energy=0.805347)[0m
+[0;32mI (20068) APP: Prediction: 1 (Other)[0m
+[0;32mI (20478) APP: Prediction: 1 (Other)[0m
+[0;32mI (20888) APP: Prediction: 1 (Other)[0m
+[0;32mI (21288) APP: Prediction: 1 (Other)[0m
+[0;32mI (21698) APP: Prediction: 1 (Other)[0m
+[0;32mI (22108) APP: Prediction: 1 (Other)[0m
+[0;32mI (22508) APP: Prediction: 1 (Other)[0m
+[0;32mI (22908) APP: Prediction: 1 (Other)[0m
+[0;32mI (23318) APP: Prediction: 1 (Other)[0m
+[0;32mI (23738) APP: Prediction: 1 (Other)[0m
+[0;32mI (24138) APP: Prediction: 1 (Other)[0m
+[0;32mI (24538) APP: Prediction: 1 (Other)[0m
+[0;32mI (24948) APP: Prediction: 1 (Other)[0m
+[0;32mI (25358) APP: Prediction: 1 (Other)[0m
+[0;32mI (25758) APP: Prediction: 1 (Other)[0m
+[0;32mI (25958) APP: VAD: speech end (energy=0.677294)[0m
+[0;32mI (26148) APP: VAD: speech start (energy=0.827530)[0m
+[0;32mI (26358) APP: Prediction: 1 (Other)[0m
+[0;32mI (26758) APP: Prediction: 1 (Other)[0m
+[0;32mI (27168) APP: Prediction: 1 (Other)[0m
+[0;32mI (27588) APP: Prediction: 1 (Other)[0m
+[0;32mI (27988) APP: Prediction: 1 (Other)[0m
+[0;32mI (28388) APP: Prediction: 1 (Other)[0m
+[0;32mI (28798) APP: Prediction: 1 (Other)[0m
+[0;32mI (29208) APP: Prediction: 1 (Other)[0m
+[0;32mI (29608) APP: Prediction: 1 (Other)[0m
+[0;32mI (30018) APP: Prediction: 1 (Other)[0m
+[0;32mI (30418) APP: Prediction: 1 (Other)[0m
+[0;32mI (30818) APP: Prediction: 1 (Other)[0m
+[0;32mI (31238) APP: Prediction: 1 (Other)[0m
+[0;32mI (31648) APP: Prediction: 1 (Other)[0m
+[0;32mI (32048) APP: Prediction: 1 (Other)[0m
+[0;32mI (32448) APP: Prediction: 1 (Other)[0m
+[0;32mI (32858) APP: Prediction: 1 (Other)[0m
+[0;32mI (33268) APP: Prediction: 1 (Other)[0m
+[0;32mI (33678) APP: Prediction: 1 (Other)[0m
+[0;32mI (34088) APP: Prediction: 1 (Other)[0m
+[0;32mI (34488) APP: Prediction: 1 (Other)[0m
+[0;32mI (34888) APP: Prediction: 1 (Other)[0m
+[0;32mI (35298) APP: Prediction: 1 (Other)[0m
+[0;32mI (35708) APP: Prediction: 1 (Other)[0m
+[0;32mI (36108) APP: Prediction: 1 (Other)[0m
+[0;32mI (36518) APP: Prediction: 1 (Other)[0m
+[0;32mI (36918) APP: Prediction: 1 (Other)[0m
+[0;32mI (37338) APP: Prediction: 1 (Other)[0m
+[0;32mI (37748) APP: Prediction: 1 (Other)[0m
+[0;32mI (38158) APP: Prediction: 1 (Other)[0m
+[0;32mI (38358) APP: VAD: speech end (energy=0.357117)[0m
+[0;32mI (40248) APP: VAD: speech start (energy=0.808038)[0m
+[0;32mI (40458) APP: Prediction: 1 (Other)[0m
+[0;32mI (40858) APP: Prediction: 1 (Other)[0m
+[0;32mI (41278) APP: Prediction: 1 (Other)[0m
+[0;32mI (41688) APP: Prediction: 1 (Other)[0m
+[0;32mI (42088) APP: Prediction: 1 (Other)[0m
+[0;32mI (42488) APP: Prediction: 1 (Other)[0m
+[0;32mI (42698) APP: VAD: speech end (energy=0.633083)[0m
+[0;32mI (42728) APP: VAD: speech start (energy=0.816691)[0m
+[0;32mI (42938) APP: Prediction: 1 (Other)[0m
+[0;32mI (43338) APP: Prediction: 1 (Other)[0m
+[0;32mI (43748) APP: Prediction: 1 (Other)[0m
+[0;32mI (44158) APP: Prediction: 1 (Other)[0m
+[0;32mI (44558) APP: Prediction: 1 (Other)[0m
+[0;32mI (44968) APP: Prediction: 1 (Other)[0m
+[0;32mI (45368) APP: Prediction: 1 (Other)[0m
+[0;32mI (45768) APP: Prediction: 1 (Other)[0m
+[0;32mI (46168) APP: Prediction: 1 (Other)[0m
+[0;32mI (46568) APP: Prediction: 1 (Other)[0m
+[0;32mI (46978) APP: Prediction: 1 (Other)[0m
+[0;32mI (47378) APP: Prediction: 1 (Other)[0m
+[0;32mI (47778) APP: Prediction: 1 (Other)[0m
+[0;32mI (48178) APP: Prediction: 1 (Other)[0m
+[0;32mI (48578) APP: Prediction: 1 (Other)[0m
+[0;32mI (48978) APP: Prediction: 1 (Other)[0m
+[0;32mI (49388) APP: Prediction: 1 (Other)[0m
+[0;32mI (49798) APP: Prediction: 1 (Other)[0m
+[0;32mI (50198) APP: Prediction: 1 (Other)[0m
+[0;32mI (50598) APP: Prediction: 1 (Other)[0m
+[0;32mI (51008) APP: Prediction: 1 (Other)[0m
+[0;32mI (51408) APP: Prediction: 1 (Other)[0m
+[0;32mI (51808) APP: Prediction: 1 (Other)[0m
+[0;32mI (52008) APP: VAD: speech end (energy=0.663491)[0m
+[0;32mI (56328) APP: VAD: speech start (energy=0.803447)[0m
+[0;32mI (56538) APP: Prediction: 1 (Other)[0m
+[0;32mI (56948) APP: Prediction: 1 (Other)[0m
+[0;32mI (57358) APP: Prediction: 1 (Other)[0m
+[0;32mI (57758) APP: Prediction: 1 (Other)[0m
+[0;32mI (58168) APP: Prediction: 1 (Other)[0m
+[0;32mI (58368) APP: VAD: speech end (energy=0.746999)[0m
+[0;32mI (58848) APP: VAD: speech start (energy=0.805581)[0m
+[0;32mI (59068) APP: Prediction: 1 (Other)[0m
+[0;32mI (59468) APP: Prediction: 1 (Other)[0m
+[0;32mI (59868) APP: Prediction: 1 (Other)[0m
+[0;32mI (60278) APP: Prediction: 1 (Other)[0m
+[0;32mI (60678) APP: Prediction: 1 (Other)[0m
+[0;32mI (61088) APP: Prediction: 1 (Other)[0m
+[0;32mI (61488) APP: Prediction: 1 (Other)[0m
+[0;32mI (61888) APP: Prediction: 1 (Other)[0m
+[0;32mI (62298) APP: Prediction: 1 (Other)[0m
+[0;32mI (62698) APP: Prediction: 1 (Other)[0m
+[0;32mI (63098) APP: Prediction: 1 (Other)[0m
+[0;32mI (63498) APP: Prediction: 1 (Other)[0m
+[0;32mI (63908) APP: Prediction: 1 (Other)[0m
+[0;32mI (64308) APP: Prediction: 1 (Other)[0m
+[0;32mI (64708) APP: Prediction: 1 (Other)[0m
+[0;32mI (65118) APP: Prediction: 1 (Other)[0m
+[0;32mI (65518) APP: Prediction: 1 (Other)[0m
+[0;32mI (65928) APP: Prediction: 1 (Other)[0m
+[0;32mI (66328) APP: Prediction: 1 (Other)[0m
+[0;32mI (66728) APP: Prediction: 1 (Other)[0m
+[0;32mI (67138) APP: Prediction: 1 (Other)[0m
+[0;32mI (67538) APP: Prediction: 1 (Other)[0m
+[0;32mI (67948) APP: Prediction: 1 (Other)[0m
+[0;32mI (68348) APP: Prediction: 1 (Other)[0m
+[0;32mI (68748) APP: Prediction: 1 (Other)[0m
+[0;32mI (69148) APP: Prediction: 1 (Other)[0m
+[0;32mI (69548) APP: Prediction: 1 (Other)[0m
+[0;32mI (69958) APP: Prediction: 1 (Other)[0m
+[0;32mI (70358) APP: Prediction: 1 (Other)[0m
+[0;32mI (70758) APP: Prediction: 1 (Other)[0m
+[0;32mI (70958) APP: VAD: speech end (energy=0.708416)[0m
+[0;32mI (88368) APP: VAD: speech start (energy=0.804531)[0m
+[0;32mI (88578) APP: Prediction: 1 (Other)[0m
+[0;32mI (88988) APP: Prediction: 1 (Other)[0m
+[0;32mI (89388) APP: Prediction: 1 (Other)[0m
+[0;32mI (89788) APP: Prediction: 1 (Other)[0m
+[0;32mI (90188) APP: Prediction: 1 (Other)[0m
+[0;32mI (90598) APP: Prediction: 1 (Other)[0m
+[0;32mI (91008) APP: Prediction: 1 (Other)[0m
+[0;32mI (91408) APP: Prediction: 1 (Other)[0m
+[0;32mI (91818) APP: Prediction: 1 (Other)[0m
+[0;32mI (92218) APP: Prediction: 1 (Other)[0m
+[0;32mI (92618) APP: Prediction: 1 (Other)[0m
+[0;32mI (93018) APP: Prediction: 1 (Other)[0m
+[0;32mI (93418) APP: Prediction: 1 (Other)[0m
+[0;32mI (93818) APP: Prediction: 1 (Other)[0m
+[0;32mI (94228) APP: Prediction: 1 (Other)[0m
+[0;32mI (94628) APP: Prediction: 1 (Other)[0m
+[0;32mI (95038) APP: Prediction: 1 (Other)[0m
+[0;32mI (95438) APP: Prediction: 1 (Other)[0m
+[0;32mI (95838) APP: Prediction: 1 (Other)[0m
+[0;32mI (96238) APP: Prediction: 1 (Other)[0m
+[0;32mI (96648) APP: Prediction: 1 (Other)[0m
+[0;32mI (97058) APP: Prediction: 1 (Other)[0m
+[0;32mI (97458) APP: Prediction: 1 (Other)[0m
+[0;32mI (97868) APP: Prediction: 1 (Other)[0m
+[0;32mI (98268) APP: Prediction: 1 (Other)[0m
+[0;32mI (98668) APP: Prediction: 1 (Other)[0m
+[0;32mI (99078) APP: Prediction: 1 (Other)[0m
+[0;32mI (99478) APP: Prediction: 1 (Other)[0m
+[0;32mI (99888) APP: Prediction: 1 (Other)[0m
+[0;32mI (100288) APP: Prediction: 1 (Other)[0m
+[0;32mI (100688) APP: Prediction: 1 (Other)[0m
+[0;32mI (101098) APP: Prediction: 1 (Other)[0m
+[0;32mI (101498) APP: Prediction: 1 (Other)[0m
+[0;32mI (101908) APP: Prediction: 1 (Other)[0m
+[0;32mI (102308) APP: Prediction: 1 (Other)[0m
+[0;32mI (102718) APP: Prediction: 1 (Other)[0m
+[0;32mI (103128) APP: Prediction: 1 (Other)[0m
+[0;32mI (103528) APP: Prediction: 1 (Other)[0m
+[0;32mI (103938) APP: Prediction: 1 (Other)[0m
+[0;32mI (104338) APP: Prediction: 1 (Other)[0m
+[0;32mI (104738) APP: Prediction: 1 (Other)[0m
+[0;32mI (105138) APP: Prediction: 1 (Other)[0m
+[0;32mI (105538) APP: Prediction: 1 (Other)[0m
+[0;32mI (105938) APP: Prediction: 1 (Other)[0m
+[0;32mI (106338) APP: Prediction: 1 (Other)[0m
+[0;32mI (106738) APP: Prediction: 1 (Other)[0m
+[0;32mI (107138) APP: Prediction: 1 (Other)[0m
+[0;32mI (107538) APP: Prediction: 1 (Other)[0m
+[0;32mI (107938) APP: Prediction: 1 (Other)[0m
+[0;32mI (108338) APP: Prediction: 1 (Other)[0m
+[0;32mI (108738) APP: Prediction: 1 (Other)[0m
+[0;32mI (109138) APP: Prediction: 1 (Other)[0m
+[0;32mI (109538) APP: Prediction: 1 (Other)[0m
+[0;32mI (109938) APP: Prediction: 1 (Other)[0m
+[0;32mI (110338) APP: Prediction: 1 (Other)[0m
+[0;32mI (110738) APP: Prediction: 1 (Other)[0m
+[0;32mI (111138) APP: Prediction: 1 (Other)[0m
+[0;32mI (111538) APP: Prediction: 1 (Other)[0m
+[0;32mI (111938) APP: Prediction: 1 (Other)[0m
+[0;32mI (112338) APP: Prediction: 1 (Other)[0m
+[0;32mI (112738) APP: Prediction: 1 (Other)[0m
+[0;32mI (113138) APP: Prediction: 1 (Other)[0m
+[0;32mI (113538) APP: Prediction: 1 (Other)[0m
+[0;32mI (113938) APP: Prediction: 1 (Other)[0m
+[0;32mI (114338) APP: Prediction: 1 (Other)[0m
+[0;32mI (114738) APP: Prediction: 1 (Other)[0m
+[0;32mI (115138) APP: Prediction: 1 (Other)[0m
+[0;32mI (115538) APP: Prediction: 1 (Other)[0m
+[0;32mI (115938) APP: Prediction: 1 (Other)[0m
+[0;32mI (116338) APP: Prediction: 1 (Other)[0m
+[0;32mI (116738) APP: Prediction: 1 (Other)[0m
+[0;32mI (117138) APP: Prediction: 1 (Other)[0m
+[0;32mI (117538) APP: Prediction: 1 (Other)[0m
+[0;32mI (117938) APP: Prediction: 1 (Other)[0m
+[0;32mI (118338) APP: Prediction: 1 (Other)[0m
+[0;32mI (118738) APP: Prediction: 1 (Other)[0m
+[0;32mI (119138) APP: Prediction: 1 (Other)[0m
+[0;32mI (119538) APP: Prediction: 1 (Other)[0m
+[0;32mI (119948) APP: Prediction: 1 (Other)[0m
+[0;32mI (120348) APP: Prediction: 1 (Other)[0m
+[0;32mI (120748) APP: Prediction: 1 (Other)[0m
+[0;32mI (121148) APP: Prediction: 1 (Other)[0m
+[0;32mI (121548) APP: Prediction: 1 (Other)[0m
+[0;32mI (121948) APP: Prediction: 1 (Other)[0m
+[0;32mI (122348) APP: Prediction: 1 (Other)[0m
+[0;32mI (122748) APP: Prediction: 1 (Other)[0m
+[0;32mI (123148) APP: Prediction: 1 (Other)[0m
+[0;32mI (123548) APP: Prediction: 1 (Other)[0m
+[0;32mI (123748) APP: VAD: speech end (energy=0.798824)[0m
+[0;32mI (123758) APP: VAD: speech start (energy=0.814689)[0m
+[0;32mI (123958) APP: Prediction: 1 (Other)[0m
+[0;32mI (124358) APP: Prediction: 1 (Other)[0m
+[0;32mI (124758) APP: Prediction: 1 (Other)[0m
+[0;32mI (125158) APP: Prediction: 1 (Other)[0m
+[0;32mI (125558) APP: Prediction: 1 (Other)[0m
+[0;32mI (125958) APP: Prediction: 1 (Other)[0m
+[0;32mI (126358) APP: Prediction: 1 (Other)[0m
+[0;32mI (126758) APP: Prediction: 1 (Other)[0m
+[0;32mI (127158) APP: Prediction: 1 (Other)[0m
+[0;32mI (127558) APP: Prediction: 1 (Other)[0m
+[0;32mI (127958) APP: Prediction: 1 (Other)[0m
+[0;32mI (128358) APP: Prediction: 1 (Other)[0m
+[0;32mI (128758) APP: Prediction: 1 (Other)[0m
+[0;32mI (129158) APP: Prediction: 1 (Other)[0m
+[0;32mI (129558) APP: Prediction: 1 (Other)[0m
+[0;32mI (129958) APP: Prediction: 1 (Other)[0m
+[0;32mI (130358) APP: Prediction: 1 (Other)[0m
+[0;32mI (130758) APP: Prediction: 1 (Other)[0m
+[0;32mI (131158) APP: Prediction: 1 (Other)[0m
+[0;32mI (131558) APP: Prediction: 1 (Other)[0m
+[0;32mI (131958) APP: Prediction: 1 (Other)[0m
+[0;32mI (132358) APP: Prediction: 1 (Other)[0m
+[0;32mI (132758) APP: Prediction: 1 (Other)[0m
+[0;32mI (133158) APP: Prediction: 1 (Other)[0m
+[0;32mI (133558) APP: Prediction: 1 (Other)[0m
+[0;32mI (133958) APP: Prediction: 1 (Other)[0m
+[0;32mI (134358) APP: Prediction: 1 (Other)[0m
+[0;32mI (134758) APP: Prediction: 1 (Other)[0m
+[0;32mI (135158) APP: Prediction: 1 (Other)[0m
+[0;32mI (135558) APP: Prediction: 1 (Other)[0m
+[0;32mI (135958) APP: Prediction: 1 (Other)[0m
+[0;32mI (136358) APP: Prediction: 1 (Other)[0m
+[0;32mI (136758) APP: Prediction: 1 (Other)[0m
+[0;32mI (137158) APP: Prediction: 1 (Other)[0m
+[0;32mI (137558) APP: Prediction: 1 (Other)[0m
+[0;32mI (137958) APP: Prediction: 1 (Other)[0m
+[0;32mI (138358) APP: Prediction: 1 (Other)[0m
+[0;32mI (138758) APP: Prediction: 1 (Other)[0m
+[0;32mI (139158) APP: Prediction: 1 (Other)[0m
+[0;32mI (139558) APP: Prediction: 1 (Other)[0m
+[0;32mI (139958) APP: Prediction: 1 (Other)[0m
+[0;32mI (140358) APP: Prediction: 1 (Other)[0m
+[0;32mI (140758) APP: Prediction: 1 (Other)[0m
+[0;32mI (141158) APP: Prediction: 1 (Other)[0m
+[0;32mI (141558) APP: Prediction: 1 (Other)[0m
+[0;32mI (141758) APP: VAD: speech end (energy=0.737822)[0m
+[0;32mI (143618) APP: VAD: speech start (energy=0.800174)[0m
+[0;32mI (143818) APP: Prediction: 1 (Other)[0m
+[0;32mI (144218) APP: Prediction: 1 (Other)[0m
+[0;32mI (144618) APP: Prediction: 1 (Other)[0m
+[0;32mI (145018) APP: Prediction: 1 (Other)[0m
+[0;32mI (145418) APP: Prediction: 1 (Other)[0m
+[0;32mI (145818) APP: Prediction: 1 (Other)[0m
+[0;32mI (146218) APP: Prediction: 1 (Other)[0m
+[0;32mI (146618) APP: Prediction: 1 (Other)[0m
+[0;32mI (147018) APP: Prediction: 1 (Other)[0m
+[0;32mI (147418) APP: Prediction: 1 (Other)[0m
+[0;32mI (147818) APP: Prediction: 1 (Other)[0m
+[0;32mI (148218) APP: Prediction: 1 (Other)[0m
+[0;32mI (148618) APP: Prediction: 1 (Other)[0m
+[0;32mI (149018) APP: Prediction: 1 (Other)[0m
+[0;32mI (149418) APP: Prediction: 1 (Other)[0m
+[0;32mI (149818) APP: Prediction: 1 (Other)[0m
+[0;32mI (150218) APP: Prediction: 1 (Other)[0m
+[0;32mI (150618) APP: Prediction: 1 (Other)[0m
+[0;32mI (151018) APP: Prediction: 1 (Other)[0m
+[0;32mI (151418) APP: Prediction: 1 (Other)[0m
+[0;32mI (151818) APP: Prediction: 1 (Other)[0m
+[0;32mI (152218) APP: Prediction: 1 (Other)[0m
+[0;32mI (152618) APP: Prediction: 1 (Other)[0m
+[0;32mI (153028) APP: Prediction: 1 (Other)[0m
+[0;32mI (153428) APP: Prediction: 1 (Other)[0m
+[0;32mI (153828) APP: Prediction: 1 (Other)[0m
+[0;32mI (154228) APP: Prediction: 1 (Other)[0m
+[0;32mI (154628) APP: Prediction: 1 (Other)[0m
+[0;32mI (155028) APP: Prediction: 1 (Other)[0m
+[0;32mI (155428) APP: Prediction: 1 (Other)[0m
+[0;32mI (155828) APP: Prediction: 1 (Other)[0m
+[0;32mI (156228) APP: Prediction: 1 (Other)[0m
+[0;32mI (156628) APP: Prediction: 1 (Other)[0m
+[0;32mI (157028) APP: Prediction: 1 (Other)[0m
+[0;32mI (157428) APP: Prediction: 1 (Other)[0m
+[0;32mI (157828) APP: Prediction: 1 (Other)[0m
+[0;32mI (158228) APP: Prediction: 1 (Other)[0m
+[0;32mI (158628) APP: Prediction: 1 (Other)[0m
+[0;32mI (159028) APP: Prediction: 1 (Other)[0m
+[0;32mI (159428) APP: Prediction: 1 (Other)[0m
+[0;32mI (159828) APP: Prediction: 1 (Other)[0m
+[0;32mI (160228) APP: Prediction: 1 (Other)[0m
+[0;32mI (160628) APP: Prediction: 1 (Other)[0m
+[0;32mI (161028) APP: Prediction: 1 (Other)[0m
+[0;32mI (161428) APP: Prediction: 1 (Other)[0m
+[0;32mI (161828) APP: Prediction: 1 (Other)[0m
+[0;32mI (162228) APP: Prediction: 1 (Other)[0m
+[0;32mI (162628) APP: Prediction: 1 (Other)[0m
+[0;32mI (163028) APP: Prediction: 1 (Other)[0m
+[0;32mI (163428) APP: Prediction: 1 (Other)[0m
+[0;32mI (163828) APP: Prediction: 1 (Other)[0m
+[0;32mI (164228) APP: Prediction: 1 (Other)[0m
+[0;32mI (164628) APP: Prediction: 1 (Other)[0m
+[0;32mI (165028) APP: Prediction: 1 (Other)[0m
+[0;32mI (165428) APP: Prediction: 1 (Other)[0m
+[0;32mI (165838) APP: Prediction: 1 (Other)[0m
+[0;32mI (166238) APP: Prediction: 1 (Other)[0m
+[0;32mI (166638) APP: Prediction: 1 (Other)[0m
+[0;32mI (167038) APP: Prediction: 1 (Other)[0m
+[0;32mI (167438) APP: Prediction: 1 (Other)[0m
+[0;32mI (167838) APP: Prediction: 1 (Other)[0m
+[0;32mI (168238) APP: Prediction: 1 (Other)[0m
+[0;32mI (168638) APP: Prediction: 1 (Other)[0m
+[0;32mI (169038) APP: Prediction: 1 (Other)[0m
+[0;32mI (169438) APP: Prediction: 1 (Other)[0m
+[0;32mI (169838) APP: Prediction: 1 (Other)[0m
+[0;32mI (170238) APP: Prediction: 1 (Other)[0m
+[0;32mI (170638) APP: Prediction: 1 (Other)[0m
+[0;32mI (171038) APP: Prediction: 1 (Other)[0m
+[0;32mI (171438) APP: Prediction: 1 (Other)[0m
+[0;32mI (171838) APP: Prediction: 1 (Other)[0m
+[0;32mI (172238) APP: Prediction: 1 (Other)[0m
+[0;32mI (172638) APP: Prediction: 1 (Other)[0m
+[0;32mI (173038) APP: Prediction: 1 (Other)[0m
+[0;32mI (173438) APP: Prediction: 1 (Other)[0m
+[0;32mI (173838) APP: Prediction: 1 (Other)[0m
+[0;32mI (174238) APP: Prediction: 1 (Other)[0m
+[0;32mI (174638) APP: Prediction: 1 (Other)[0m
+[0;32mI (175038) APP: Prediction: 1 (Other)[0m
+[0;32mI (175438) APP: Prediction: 1 (Other)[0m
+[0;32mI (175838) APP: Prediction: 1 (Other)[0m
+[0;32mI (176238) APP: Prediction: 1 (Other)[0m
+[0;32mI (176638) APP: Prediction: 1 (Other)[0m
+[0;32mI (177038) APP: Prediction: 1 (Other)[0m
+[0;32mI (177438) APP: Prediction: 1 (Other)[0m
+[0;32mI (177838) APP: Prediction: 1 (Other)[0m
+[0;32mI (178238) APP: Prediction: 1 (Other)[0m
+[0;32mI (178638) APP: Prediction: 1 (Other)[0m
+[0;32mI (179038) APP: Prediction: 1 (Other)[0m
+[0;32mI (179438) APP: Prediction: 1 (Other)[0m
+[0;32mI (179838) APP: Prediction: 1 (Other)[0m
+[0;32mI (180248) APP: Prediction: 1 (Other)[0m
+[0;32mI (180648) APP: Prediction: 1 (Other)[0m
+[0;32mI (181058) APP: Prediction: 1 (Other)[0m
+[0;32mI (181458) APP: Prediction: 1 (Other)[0m
+[0;32mI (181858) APP: Prediction: 1 (Other)[0m
+[0;32mI (182258) APP: Prediction: 1 (Other)[0m
+[0;32mI (182658) APP: Prediction: 1 (Other)[0m
+[0;32mI (183058) APP: Prediction: 1 (Other)[0m
+[0;32mI (183458) APP: Prediction: 1 (Other)[0m
+[0;32mI (183858) APP: Prediction: 1 (Other)[0m
+[0;32mI (184258) APP: Prediction: 1 (Other)[0m
+[0;32mI (184658) APP: Prediction: 1 (Other)[0m
+[0;32mI (185058) APP: Prediction: 1 (Other)[0m
+[0;32mI (185458) APP: Prediction: 1 (Other)[0m
+[0;32mI (185858) APP: Prediction: 1 (Other)[0m
+[0;32mI (186258) APP: Prediction: 1 (Other)[0m
+[0;32mI (186658) APP: Prediction: 1 (Other)[0m
+[0;32mI (187058) APP: Prediction: 1 (Other)[0m
+[0;32mI (187458) APP: Prediction: 1 (Other)[0m
+[0;32mI (187858) APP: Prediction: 1 (Other)[0m
+[0;32mI (188258) APP: Prediction: 1 (Other)[0m
+[0;32mI (188658) APP: Prediction: 1 (Other)[0m
+[0;32mI (189058) APP: Prediction: 1 (Other)[0m
+[0;32mI (189458) APP: Prediction: 1 (Other)[0m
+[0;32mI (189858) APP: Prediction: 1 (Other)[0m
+[0;32mI (190258) APP: Prediction: 1 (Other)[0m
+[0;32mI (190658) APP: Prediction: 1 (Other)[0m
+[0;32mI (191058) APP: Prediction: 1 (Other)[0m
+[0;32mI (191458) APP: Prediction: 1 (Other)[0m
+[0;32mI (191858) APP: Prediction: 1 (Other)[0m
+[0;32mI (192258) APP: Prediction: 1 (Other)[0m
+[0;32mI (192658) APP: Prediction: 1 (Other)[0m
+[0;32mI (193058) APP: Prediction: 1 (Other)[0m
+[0;32mI (193458) APP: Prediction: 1 (Other)[0m
+[0;32mI (193858) APP: Prediction: 1 (Other)[0m
+[0;32mI (194258) APP: Prediction: 1 (Other)[0m
+[0;32mI (194658) APP: Prediction: 1 (Other)[0m
+[0;32mI (195058) APP: Prediction: 1 (Other)[0m
+[0;32mI (195458) APP: Prediction: 1 (Other)[0m
+[0;32mI (195858) APP: Prediction: 1 (Other)[0m
+[0;32mI (196258) APP: Prediction: 1 (Other)[0m
+[0;32mI (196658) APP: Prediction: 1 (Other)[0m
+[0;32mI (197058) APP: Prediction: 1 (Other)[0m
+[0;32mI (197458) APP: Prediction: 1 (Other)[0m
+[0;32mI (197858) APP: Prediction: 1 (Other)[0m
+[0;32mI (198258) APP: Prediction: 1 (Other)[0m
+[0;32mI (198658) APP: Prediction: 1 (Other)[0m
+[0;32mI (199058) APP: Prediction: 1 (Other)[0m
+[0;32mI (199458) APP: Prediction: 1 (Other)[0m
+[0;32mI (199858) APP: Prediction: 1 (Other)[0m
+[0;32mI (200258) APP: Prediction: 1 (Other)[0m
+[0;32mI (200658) APP: Prediction: 1 (Other)[0m
+[0;32mI (201058) APP: Prediction: 1 (Other)[0m
+[0;32mI (201458) APP: Prediction: 1 (Other)[0m
+[0;32mI (201858) APP: Prediction: 1 (Other)[0m
+[0;32mI (202258) APP: Prediction: 1 (Other)[0m
+[0;32mI (202658) APP: Prediction: 1 (Other)[0m
+[0;32mI (203058) APP: Prediction: 1 (Other)[0m
+[0;32mI (203458) APP: Prediction: 1 (Other)[0m
+[0;32mI (203858) APP: Prediction: 1 (Other)[0m
+[0;32mI (204258) APP: Prediction: 1 (Other)[0m
+[0;32mI (204658) APP: Prediction: 1 (Other)[0m
+[0;32mI (205058) APP: Prediction: 1 (Other)[0m
+[0;32mI (205458) APP: Prediction: 1 (Other)[0m
+[0;32mI (205858) APP: Prediction: 1 (Other)[0m
+[0;32mI (206258) APP: Prediction: 1 (Other)[0m
+[0;32mI (206658) APP: Prediction: 1 (Other)[0m
+[0;32mI (207058) APP: Prediction: 1 (Other)[0m
+[0;32mI (207458) APP: Prediction: 1 (Other)[0m
+[0;32mI (207858) APP: Prediction: 1 (Other)[0m
+[0;32mI (208258) APP: Prediction: 1 (Other)[0m
+[0;32mI (208658) APP: Prediction: 1 (Other)[0m
+[0;32mI (209058) APP: Prediction: 1 (Other)[0m
+[0;32mI (209458) APP: Prediction: 1 (Other)[0m
+[0;32mI (209858) APP: Prediction: 1 (Other)[0m
+[0;32mI (210258) APP: Prediction: 1 (Other)[0m
+[0;32mI (210658) APP: Prediction: 1 (Other)[0m
+[0;32mI (211058) APP: Prediction: 1 (Other)[0m
+[0;32mI (211258) APP: VAD: speech end (energy=0.000000)[0m
