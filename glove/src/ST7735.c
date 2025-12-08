@@ -26,55 +26,63 @@ void Delay_ms(unsigned int n)
     while(n--) _delay_ms(1);
 }
 
-void SPI_ControllerTx_stream(uint8_t v)
+void SPI_ControllerTx_stream(uint8_t value)
 {
-    SPDR0 = v;
+    SPDR0 = value;
     while(!(SPSR0 & (1<<SPIF)));
 }
 
-void SPI_ControllerTx(uint8_t v)
+void SPI_ControllerTx(uint8_t value)
 {
     clear(LCD_PORT, LCD_TFT_CS);
-    SPI_ControllerTx_stream(v);
+    SPI_ControllerTx_stream(value);
     set(LCD_PORT, LCD_TFT_CS);
 }
 
-void SPI_ControllerTx_16bit(uint16_t v)
+void SPI_ControllerTx_16bit(uint16_t value)
 {
-    uint8_t hi = v>>8;
+    uint8_t highByte = value >> 8;
     clear(LCD_PORT, LCD_TFT_CS);
-    SPDR0 = hi;
+
+    SPDR0 = highByte;
     while(!(SPSR0 & (1<<SPIF)));
-    SPDR0 = v;
+
+    SPDR0 = value;
     while(!(SPSR0 & (1<<SPIF)));
+
     set(LCD_PORT, LCD_TFT_CS);
 }
 
-void SPI_ControllerTx_16bit_stream(uint16_t v)
+void SPI_ControllerTx_16bit_stream(uint16_t value)
 {
-    uint8_t hi = v>>8;
-    SPDR0 = hi;
+    uint8_t highByte = value >> 8;
+
+    SPDR0 = highByte;
     while(!(SPSR0 & (1<<SPIF)));
-    SPDR0 = v;
+
+    SPDR0 = value;
     while(!(SPSR0 & (1<<SPIF)));
 }
 
-void sendCommands(const uint8_t *cmds, uint8_t count)
+void sendCommands(const uint8_t *cmdList, uint8_t cmdCount)
 {
-    uint8_t d, t;
+    uint8_t dataCount;
+    uint8_t delayMs;
+
     clear(LCD_PORT, LCD_TFT_CS);
 
-    while(count--)
+    while(cmdCount--)
     {
         clear(LCD_PORT, LCD_DC);
-        SPI_ControllerTx_stream(*cmds++);
-        d = *cmds++;
+        SPI_ControllerTx_stream(*cmdList++);
+
+        dataCount = *cmdList++;
 
         set(LCD_PORT, LCD_DC);
-        while(d--) SPI_ControllerTx_stream(*cmds++);
+        while(dataCount--) SPI_ControllerTx_stream(*cmdList++);
 
-        t = *cmds++;
-        if(t) Delay_ms(t==255 ? 500 : t);
+        delayMs = *cmdList++;
+        if(delayMs) Delay_ms(delayMs == 255 ? 500 : delayMs);
     }
 
     set(LCD_PORT, LCD_TFT_CS);
@@ -86,7 +94,7 @@ void lcd_init(void)
     SPI_init();
     _delay_ms(5);
 
-    static uint8_t initcmds[] =
+    static uint8_t initSequence[] =
     {
         ST7735_SWRESET,0,150,
         ST7735_SLPOUT,0,255,
@@ -112,35 +120,35 @@ void lcd_init(void)
         ST7735_MADCTL,1, MADCTL_MX|MADCTL_MV|MADCTL_RGB,10
     };
 
-    sendCommands(initcmds, 22);
+    sendCommands(initSequence, 22);
 }
 
 void LCD_setAddr(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
 {
-    uint8_t cmds[] =
+    uint8_t addrCommands[] =
     {
         ST7735_CASET,4,0x00,x0,0x00,x1,0,
         ST7735_RASET,4,0x00,y0,0x00,y1,0,
         ST7735_RAMWR,0,0
     };
-    sendCommands(cmds,3);
+    sendCommands(addrCommands,3);
 }
 
-void LCD_brightness(uint8_t v)
+void LCD_brightness(uint8_t value)
 {
-    OCR0A = v;
+    OCR0A = value;
 }
 
-void LCD_rotate(uint8_t r)
+void LCD_rotate(uint8_t rotation)
 {
-    uint8_t m;
-    r &= 3;
+    uint8_t madctlValue;
+    rotation &= 3;
 
-    if(r==0) m = MADCTL_MX|MADCTL_MY|MADCTL_RGB;
-    else if(r==1) m = MADCTL_MY|MADCTL_MV|MADCTL_RGB;
-    else if(r==2) m = MADCTL_RGB;
-    else m = MADCTL_MX|MADCTL_MV|MADCTL_RGB;
+    if(rotation == 0) madctlValue = MADCTL_MX | MADCTL_MY | MADCTL_RGB;
+    else if(rotation == 1) madctlValue = MADCTL_MY | MADCTL_MV | MADCTL_RGB;
+    else if(rotation == 2) madctlValue = MADCTL_RGB;
+    else madctlValue = MADCTL_MX | MADCTL_MV | MADCTL_RGB;
 
-    uint8_t cmds[] = { ST7735_MADCTL,1,m,0 };
-    sendCommands(cmds,1);
+    uint8_t rotateCmds[] = { ST7735_MADCTL,1,madctlValue,0 };
+    sendCommands(rotateCmds,1);
 }
