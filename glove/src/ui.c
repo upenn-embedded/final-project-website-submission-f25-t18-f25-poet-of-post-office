@@ -5,21 +5,18 @@
 #include "ST7735.h"
 #include "LCD_GFX.h"
 
-/* LCD_GFX.c ????????????????????? */
+
 extern void LCD_drawStringSize(uint8_t x, uint8_t y,
                                char *str,
                                uint16_t fg, uint16_t bg,
                                uint8_t size);
 
-/* ================== UI ???? ================== */
 
-static gesture_t g_current_gesture = GESTURE_PALM;
-static uint16_t  g_last_bpm_displayed = 0xFFFF;
-static uint8_t   g_heart_big = 0;  // ???????/????????
+static gesture_t g_current_gesture      = GESTURE_PALM;
+static uint16_t  g_last_bpm_displayed   = 0xFFFF;  
+static uint8_t   g_heart_big            = 0;   
 
-/* ================== ???? ================== */
 
-/* uint16_t ???????? */
 static void ui_uint_to_str(uint16_t v, char *buf)
 {
     char tmp[6];
@@ -43,12 +40,11 @@ static void ui_uint_to_str(uint16_t v, char *buf)
     buf[j] = '\0';
 }
 
-/* ================== ?????? ================== */
+
 
 #define HEART_W 12
 #define HEART_H 10
 
-/* ???????1 ????0 ??? */
 static const uint16_t heart_bitmap[HEART_H] = {
     0b000011001100,
     0b000111111110,
@@ -62,7 +58,7 @@ static const uint16_t heart_bitmap[HEART_H] = {
     0b000000100000
 };
 
-/* ? (x,y) ?????????? scale ??? */
+
 static void ui_draw_heart(uint8_t x, uint8_t y,
                           uint8_t scale,
                           uint16_t fg, uint16_t bg)
@@ -73,7 +69,7 @@ static void ui_draw_heart(uint8_t x, uint8_t y,
         uint16_t line = heart_bitmap[row];
 
         for (uint8_t col = 0; col < HEART_W; col++) {
-            uint8_t bit = (line >> (HEART_W - 1 - col)) & 0x01;
+            uint8_t bit   = (line >> (HEART_W - 1 - col)) & 0x01;
             uint16_t color = bit ? fg : bg;
 
             for (uint8_t sx = 0; sx < scale; sx++) {
@@ -87,39 +83,38 @@ static void ui_draw_heart(uint8_t x, uint8_t y,
     }
 }
 
-/* ================== ???????? ================== */
 
-/* ???????????? + ?XXX bpm? */
-void UI_OnHeartRateUpdated(uint16_t bpm)
+static void ui_draw_hr_area(void)
 {
-    // ?????????????????
-    g_heart_big = !g_heart_big;
-    uint8_t scale = g_heart_big ? 2 : 1;
-
-    // ????????0~23 ???????
+   
     LCD_drawBlock(0, 0, LCD_WIDTH - 1, 23, BLACK);
 
-    // ????????
+    uint8_t scale = g_heart_big ? 2 : 1;
+
     ui_draw_heart(2, 2, scale, RED, BLACK);
 
-    // ? "XXX bpm" ??
     char bpm_text[16];
-    if (bpm == 0) {
+
+    if (g_last_bpm_displayed == 0 || g_last_bpm_displayed == 0xFFFF) {
+        
         strcpy(bpm_text, "-- bpm");
     } else {
         char num[8];
-        ui_uint_to_str(bpm, num);
+        ui_uint_to_str(g_last_bpm_displayed, num);
         strcpy(bpm_text, num);
         strcat(bpm_text, " bpm");
     }
 
-    // ???????????size = 2?
     LCD_drawStringSize(30, 6, bpm_text, WHITE, BLACK, 2);
-
-    g_last_bpm_displayed = bpm;
 }
 
-/* ?????????????????? */
+
+void UI_OnHeartRateUpdated(uint16_t bpm)
+{
+    g_last_bpm_displayed = bpm;
+    ui_draw_hr_area();
+}
+
 void UI_OnGestureUpdated(gesture_t gesture)
 {
     g_current_gesture = gesture;
@@ -139,7 +134,7 @@ void UI_OnGestureUpdated(gesture_t gesture)
             strcpy(text, "ROCK");
             break;
         case GESTURE_2:
-            strcpy(text, "G2");
+            strcpy(text, "OK");
             break;
         case GESTURE_3:
             strcpy(text, "TAUNT");
@@ -171,15 +166,20 @@ void UI_OnGestureUpdated(gesture_t gesture)
 }
 
 
-/* UI ?????? + ???? */
+void UI_HeartbeatTick(void)
+{
+    g_heart_big = !g_heart_big;
+    ui_draw_hr_area();           
+}
+
 void UI_Init(void)
 {
-    // ????
+
     LCD_setScreen(rgb565(0, 0, 0));
 
-    // ???? 0??? "-- bpm"
-    UI_OnHeartRateUpdated(0);
+    g_last_bpm_displayed = 0;
+    g_heart_big          = 0;
+    ui_draw_hr_area();
 
-    // ???? PALM
     UI_OnGestureUpdated(GESTURE_0);
 }

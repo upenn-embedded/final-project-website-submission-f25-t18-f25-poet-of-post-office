@@ -1,0 +1,407 @@
+Command: C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Tao\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM9 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\mcu\voice\esp_kws\build\esp_kws.elf C:\mcu\voice\esp_kws\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Tao\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Tao\esp\v5.5\esp-idf\tools\idf.py' '-p' 'COM9'
+[0;32mI (114) esp_image: segment 1: paddr=00036654 vaddr=3fc9bc00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42008148
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 20:34:15[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2662ch (157228) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=00036654 vaddr=3fc9bc00 size=04ac4h ( 19140) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=0003b120 vaddr=40374000 size=04ef8h ( 20216) load[0m
+[0;32mI (123) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=be200h (778752) map[0m
+[0;32mI (262) esp_image: segment 4: paddr=000fe228 vaddr=40378ef8 size=12c0ch ( 76812) load[0m
+[0;32mI (279) esp_image: segment 5: paddr=00110e3c vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (289) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (289) boot: Disabling RNG early entropy source...[0m
+[0;32mI (300) cpu_start: Multicore app[0m
+[0;32mI (309) cpu_start: Pro cpu start user code[0m
+[0;32mI (309) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (309) app_init: Application information:[0m
+[0;32mI (310) app_init: Project name:     esp_kws[0m
+[0;32mI (313) app_init: App version:      1[0m
+[0;32mI (317) app_init: Compile time:     Dec  4 2025 20:33:57[0m
+[0;32mI (322) app_init: ELF file SHA256:  6ab5a2bc4...[0m
+[0;32mI (326) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (330) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (333) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (337) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (341) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (348) heap_init: At 3FCD7068 len 000126A8 (73 KiB): RAM[0m
+[0;32mI (353) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (358) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (363) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (369) spi_flash: detected chip: boya[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;32mI (375) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (381) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (398) main_task: Calling app_main()[0m
+[0;32mI (398) APP: ESP KWS + WiFi + UART starting...[0m
+[0;32mI (408) pp: pp rom version: e7ae62f[0m
+[0;32mI (408) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (418) wifi:wifi driver task: 3fced494, prio:23, stack:6656, core=0[0m
+[0;32mI (418) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (418) wifi:wifi certification version: v7.0[0m
+[0;32mI (418) wifi:config NVS flash: enabled[0m
+[0;32mI (428) wifi:config nano formatting: disabled[0m
+[0;32mI (428) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (428) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (438) wifi:Init management short buffer num: 32[0m
+[0;32mI (438) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (448) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (448) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (448) wifi:Init static rx buffer num: 10[0m
+[0;32mI (458) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (458) wifi_init: rx ba win: 6[0m
+[0;32mI (468) wifi_init: accept mbox: 6[0m
+[0;32mI (468) wifi_init: tcpip mbox: 32[0m
+[0;32mI (468) wifi_init: udp mbox: 6[0m
+[0;32mI (468) wifi_init: tcp mbox: 6[0m
+[0;32mI (478) wifi_init: tcp tx win: 5760[0m
+[0;32mI (478) wifi_init: tcp rx win: 5760[0m
+[0;32mI (478) wifi_init: tcp mss: 1440[0m
+[0;32mI (488) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (488) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (488) APP: WiFi state -> 1[0m
+[0;33mW (498) wifi_conn: No NVS namespace 'wifi'[0m
+[0;32mI (588) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;33mW (588) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (618) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (638) wifi:mode : sta (10:51:db:82:4b:34) + softAP (10:51:db:82:4b:35)[0m
+[0;32mI (638) wifi:enable tsf[0m
+[0;32mI (638) wifi:Total power save buffer number: 16[0m
+[0;32mI (638) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (638) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (648) wifi_conn: SoftAP: SSID=Glove_Setup PASS=12345678 (IP 192.168.4.1)[0m
+[0;32mI (648) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (658) APP: WiFi state -> 3[0m
+[0;32mI (668) wifi_conn: HTTP started :80[0m
+[0;32mI (668) APP: Initializing I2S...[0m
+[0;32mI (668) APP: I2S initialized: 16000 Hz[0m
+[0;32mI (668) APP: UART initialized: port=1, TX=4, RX=5[0m
+[0;32mI (678) KWS: Initializing TFLite Micro...[0m
+[0;32mI (678) KWS: TFLM initialized. Input dims:[0m
+ 1 49 40 1
+[0;32mI (688) APP: kws_task started[0m
+[0;32mI (688) APP: uart_rx_task started[0m
+[0;32mI (688) main_task: Returned from app_main()[0m
+[0;32mI (798) APP: UART RX line: hr=103,gest=palm[0m
+[0;32mI (1548) APP: UART RX line: hr=96,gest=palm[0m
+[0;32mI (1918) APP: UART RX line: hr=96,gest=palm[0m
+[0;32mI (2378) APP: UART RX line: hr=104,gest=palm[0m
+[0;32mI (2828) APP: UART RX line: hr=108,gest=palm[0m
+[0;32mI (3398) APP: UART RX line: hr=114,gest=palm[0m
+[0;32mI (3818) APP: UART RX line: hr=114,gest=palm[0m
+[0;32mI (4698) APP: UART RX line: hr=108,gest=palm[0m
+[0;32mI (7698) APP: UART RX line: hr=107,gest=palm[0m
+[0;32mI (13698) APP: UART RX line: hr=107,gest=palm[0m
+[0;32mI (14368) APP: UART RX line: hr=117,gest=palm[0m
+[0;32mI (19858) APP: UART RX line: hr=119,gest=palm[0m
+[0;32mI (24398) APP: UART RX line: hr=118,gest=palm[0m
+[0;32mI (28778) APP: UART RX line: hr=113,gest=palm[0m
+[0;32mI (29588) APP: UART RX line: hr=108,gest=palm[0m
+[0;32mI (29918) APP: UART RX line: hr=108,gest=palm[0m
+[0;32mI (31148) APP: UART RX line: hr=107,gest=palm[0m
+[0;32mI (33058) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33058) wifi:station: e4:60:17:68:12:53 join, AID=1, bgn, 40U[0m
+[0;32mI (33588) wifi:<ba-add>idx:2 (ifx:1, e4:60:17:68:12:53), tid:0, ssn:12, winSize:64[0m
+[0;32mI (33808) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (34728) APP: UART RX line: hr=110,gest=palm[0m
+[0;32mI (36408) APP: UART RX line: hr=112,gest=palm[0m
+[0;32mI (37338) APP: UART RX line: hr=112,gest=palm[0m
+[0;32mI (38208) APP: UART RX line: hr=102,gest=palm[0m
+[0;32mI (38578) APP: UART RX line: hr=107,gest=palm[0m
+[0;32mI (40078) APP: UART RX line: hr=102,gest=palm[0m
+[0;32mI (41058) wifi:[ADDBA]RX DELBA, reason:37, delete tid:0, initiator:1(originator)[0m
+[0;32mI (41058) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (44828) wifi:<ba-add>idx:2 (ifx:1, e4:60:17:68:12:53), tid:0, ssn:251, winSize:64[0m
+[0;32mI (47128) APP: UART RX line: hr=102,gest=palm[0m
+[0;32mI (47398) APP: UART RX line: hr=111,gest=palm[0m
+[0;32mI (48748) APP: UART RX line: hr=107,gest=palm[0m
+[0;32mI (49108) APP: UART RX line: hr=108,gest=palm[0m
+[0;32mI (49538) APP: UART RX line: hr=109,gest=palm[0m
+[0;32mI (49898) APP: UART RX line: hr=115,gest=palm[0m
+[0;32mI (50208) APP: UART RX line: hr=123,gest=palm[0m
+[0;32mI (55098) APP: UART RX line: hr=133,gest=palm[0m
+[0;32mI (56748) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (61288) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (61618) APP: UART RX line: hr=133,gest=palm[0m
+[0;32mI (65548) wifi:<ba-add>idx:3 (ifx:1, e4:60:17:68:12:53), tid:5, ssn:1, winSize:64[0m
+[0;32mI (67078) APP: UART RX line: hr=131,gest=palm[0m
+[0;32mI (69688) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (70018) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (72098) APP: UART RX line: hr=125,gest=palm[0m
+[0;32mI (72518) APP: UART RX line: hr=124,gest=palm[0m
+[0;32mI (73058) APP: UART RX line: hr=120,gest=palm[0m
+[0;32mI (73328) APP: UART RX line: hr=124,gest=palm[0m
+[0;32mI (74678) APP: UART RX line: hr=124,gest=palm[0m
+[0;32mI (75828) APP: UART RX line: hr=134,gest=palm[0m
+[0;32mI (79878) APP: UART RX line: hr=132,gest=palm[0m
+[0;32mI (80518) APP: UART RX line: hr=125,gest=palm[0m
+[0;32mI (114298) APP: UART RX line: hr=170,gest=palm[0m
+[0;32mI (115258) APP: UART RX line: hr=160,gest=palm[0m
+[0;32mI (115628) APP: UART RX line: hr=160,gest=palm[0m
+[0;32mI (116228) APP: UART RX line: hr=152,gest=palm[0m
+[0;32mI (121448) APP: UART RX line: hr=153,gest=palm[0m
+[0;32mI (122558) APP: UART RX line: hr=144,gest=palm[0m
+[0;32mI (122888) APP: UART RX line: hr=143,gest=palm[0m
+[0;32mI (124008) APP: UART RX line: hr=134,gest=palm[0m
+[0;32mI (127158) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (128938) APP: UART RX line: hr=125,gest=palm[0m
+[0;32mI (129298) APP: UART RX line: hr=126,gest=palm[0m
+[0;32mI (131218) APP: UART RX line: hr=132,gest=palm[0m
+[0;32mI (136448) APP: UART RX line: hr=129,gest=palm[0m
+[0;32mI (136818) APP: UART RX line: hr=134,gest=palm[0m
+[0;32mI (147368) wifi_conn: provision_post body={"ssid":"keyituo","password":"tivon123"}[0m
+[0;32mI (147368) wifi_conn: ps head: "ssid":"keyituo","password":"t[0m
+[0;32mI (147368) wifi_conn: pp head: "password":"tivon123"}[0m
+[0;32mI (147378) wifi_conn: sscanf ret: ssid=1 pass=1[0m
+[0;32mI (147638) wifi_conn: Switching to STA mode SSID=keyituo ...[0m
+[0;32mI (147638) wifi_conn: HTTP stopping ...[0m
+[0;32mI (147738) wifi_conn: HTTP stopped[0m
+[0;32mI (147738) wifi:station: e4:60:17:68:12:53 leave, AID = 1, reason = 2, bss_flags is 756835, bss:0x3fce8be0[0m
+[0;32mI (147738) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (147738) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (147748) wifi:<ba-del>idx:3, tid:5[0m
+[0;32mI (147818) wifi:flush txq[0m
+[0;32mI (147818) wifi:stop sw txq[0m
+[0;32mI (147818) wifi:lmac stop hw txq[0m
+[0;32mI (147818) wifi:mode : sta (10:51:db:82:4b:34)[0m
+[0;32mI (147818) wifi:enable tsf[0m
+[0;32mI (147818) wifi_conn: STA: Connecting to SSID=keyituo ...[0m
+[0;33mW (150228) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (150238) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (152648) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (152648) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (155058) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (155058) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (157468) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (157468) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (157828) wifi_conn: Connect failed, back to AP portal[0m
+[0;32mI (157828) wifi:mode : sta (10:51:db:82:4b:34) + softAP (10:51:db:82:4b:35)[0m
+[0;32mI (157828) wifi:Total power save buffer number: 16[0m
+[0;32mI (157828) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (157838) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (157838) wifi:Total power save buffer number: 16[0m
+[0;32mI (157838) wifi_conn: SoftAP: SSID=Glove_Setup PASS=12345678 (IP 192.168.4.1)[0m
+[0;32mI (157848) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (157858) APP: WiFi state -> 3[0m
+[0;32mI (157858) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (157868) wifi_conn: HTTP started :80[0m
+[0;33mW (160258) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;33mW (160258) wifi_conn: STA_DISCONNECTED reason=201[0m
+[0;32mI (161188) wifi:ap channel adjust o:1,1 n:6,2[0m
+[0;32mI (161188) wifi:new:<6,0>, old:<1,1>, ap:<6,2>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (161188) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (161198) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (161208) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (161268) wifi:connected with keyituo, aid = 1, channel 6, BW20, bssid = 62:6e:e2:86:e4:2e[0m
+[0;32mI (161268) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (161268) wifi:pm start, type: 1[0m
+
+[0;32mI (161268) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (161278) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (161508) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (162798) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (162798) wifi_conn: GOT_IP 172.20.10.2[0m
+[0;32mI (162798) wifi_conn: GOT_IP 172.20.10.2[0m
+[0;32mI (176608) APP: UART RX line: hr=134,gest=OK[0m
+[0;32mI (177448) APP: UART RX line: hr=134,gest=palm[0m
+[0;32mI (179458) wifi:<ba-add>idx:0 (ifx:0, 62:6e:e2:86:e4:2e), tid:0, ssn:2, winSize:64[0m
+[0;33mW (179488) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (179488) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (179518) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (179518) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (179858) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (179858) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (180268) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (180268) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (180458) APP: UART RX line: hr=80,gest=palm[0m
+[0;32mI (180888) APP: UART RX line: hr=80,gest=fist[0m
+[0;33mW (180888) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (180888) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (181438) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (181438) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (181458) APP: UART RX line: hr=80,gest=FXXK[0m
+[0;32mI (181638) APP: UART RX line: hr=80,gest=palm[0m
+[0;33mW (181798) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (181798) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (182208) APP: UART RX line: hr=81,gest=palm[0m
+[0;33mW (182468) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (182468) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (182828) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (182828) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (183348) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (183348) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (183778) APP: UART RX line: hr=83,gest=palm[0m
+[0;33mW (183858) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (183868) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (184238) APP: UART RX line: hr=86,gest=palm[0m
+[0;33mW (184378) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (184378) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (184978) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (184988) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (185138) APP: UART RX line: hr=91,gest=palm[0m
+[0;33mW (185288) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (185288) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (185808) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (185808) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (185918) APP: UART RX line: hr=91,gest=OK[0m
+[0;32mI (186068) APP: UART RX line: hr=91,gest=fist[0m
+[0;32mI (186188) APP: UART RX line: hr=97,gest=fist[0m
+[0;33mW (186318) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (186318) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (187048) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (187048) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (187328) httpd_uri: httpd_uri: URI '/status' not found[0m
+[0;33mW (187328) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (188738) APP: UART RX line: hr=97,gest=palm[0m
+[0;32mI (189038) APP: UART RX line: hr=103,gest=palm[0m
+[0;32mI (190718) APP: UART RX line: hr=106,gest=palm[0m
+[0;32mI (191598) APP: UART RX line: hr=108,gest=palm[0m
+[0;32mI (192468) APP: UART RX line: hr=110,gest=palm[0m
+[0;32mI (192828) APP: UART RX line: hr=118,gest=palm[0m
+[0;32mI (193698) APP: UART RX line: hr=128,gest=palm[0m
+[0;32mI (194118) APP: UART RX line: hr=131,gest=palm[0m
+[0;32mI (195078) APP: UART RX line: hr=118,gest=palm[0m
+[0;32mI (196558) APP: UART RX line: hr=116,gest=palm[0m
+[0;32mI (197428) APP: UART RX line: hr=111,gest=palm[0m
+[0;32mI (198278) APP: UART RX line: hr=102,gest=palm[0m
+[0;32mI (199098) APP: UART RX line: hr=98,gest=palm[0m
+[0;32mI (199458) APP: UART RX line: hr=103,gest=palm[0m
+[0;32mI (199848) APP: UART RX line: hr=107,gest=palm[0m
+[0;32mI (200208) APP: UART RX line: hr=108,gest=palm[0m
+[0;32mI (200718) APP: UART RX line: hr=106,gest=palm[0m
+[0;32mI (200928) APP: UART RX line: hr=106,gest=OK[0m
+[0;32mI (201088) APP: UART RX line: hr=106,gest=OK[0m
+[0;32mI (201238) APP: UART RX line: hr=106,gest=palm[0m
+[0;32mI (201528) APP: UART RX line: hr=106,gest=OK[0m
+[0;32mI (201738) APP: UART RX line: hr=119,gest=OK[0m
+[0;32mI (201888) APP: UART RX line: hr=119,gest=palm[0m
+[0;32mI (202078) APP: UART RX line: hr=119,gest=OK[0m
+[0;32mI (202538) APP: UART RX line: hr=119,gest=palm[0m
+[0;32mI (202758) APP: UART RX line: hr=119,gest=OK[0m
+[0;32mI (205548) APP: UART RX line: hr=119,gest=palm[0m
+[0;32mI (206688) APP: UART RX line: hr=118,gest=palm[0m
+[0;32mI (236118) APP: UART RX line: hr=124,gest=palm[0m
+[0;32mI (237738) APP: UART RX line: hr=139,gest=palm[0m
+[0;32mI (238888) APP: UART RX line: hr=139,gest=POINTING[0m
+[0;32mI (239138) APP: UART RX line: hr=139,gest=fist[0m
+[0;32mI (242348) APP: UART RX line: hr=139,gest=POINTING[0m
+[0;32mI (242498) APP: UART RX line: hr=154,gest=POINTING[0m
+[0;32mI (242888) APP: UART RX line: hr=153,gest=POINTING[0m
+[0;32mI (245898) APP: UART RX line: hr=153,gest=Victory[0m
+[0;32mI (246138) APP: UART RX line: hr=153,gest=POINTING[0m
+[0;32mI (246438) APP: UART RX line: hr=153,gest=Victory[0m
+[0;32mI (246678) APP: UART RX line: hr=153,gest=POINTING[0m
+[0;32mI (246778) APP: UART RX line: hr=155,gest=POINTING[0m
+[0;32mI (247348) APP: UART RX line: hr=155,gest=Victory[0m
+[0;32mI (247528) APP: UART RX line: hr=155,gest=Victory[0m
+[0;32mI (249908) APP: UART RX line: hr=155,gest=POINTING[0m
+[0;32mI (250028) APP: UART RX line: hr=159,gest=POINTING[0m
+[0;32mI (250238) APP: UART RX line: hr=159,gest=Victory[0m
+[0;32mI (250458) APP: UART RX line: hr=159,gest=POINTING[0m
+[0;32mI (251358) APP: UART RX line: hr=163,gest=POINTING[0m
+[0;32mI (253128) APP: UART RX line: hr=163,gest=palm[0m
+[0;32mI (253258) APP: UART RX line: hr=163,gest=OK[0m
+[0;32mI (253378) APP: UART RX line: hr=164,gest=OK[0m
+[0;32mI (254978) APP: UART RX line: hr=164,gest=TAUNT[0m
+[0;32mI (257858) APP: UART RX line: hr=164,gest=fist[0m
+[0;32mI (259038) APP: UART RX line: hr=164,gest=FXXK[0m
+[0;32mI (260688) APP: UART RX line: hr=164,gest=fist[0m
+[0;32mI (260848) APP: UART RX line: hr=164,gest=palm[0m
+[0;32mI (262408) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (268178) APP: UART RX line: hr=127,gest=ROCK[0m
+[0;32mI (268358) APP: UART RX line: hr=127,gest=fist[0m
+[0;32mI (268668) APP: UART RX line: hr=127,gest=TAUNT[0m
+[0;32mI (268818) APP: UART RX line: hr=127,gest=OK[0m
+[0;32mI (269658) APP: UART RX line: hr=120,gest=OK[0m
+[0;32mI (270288) APP: UART RX line: hr=120,gest=OK[0m
+[0;32mI (271098) APP: UART RX line: hr=120,gest=FXXK[0m
+[0;32mI (271278) APP: UART RX line: hr=120,gest=fist[0m
+[0;32mI (271998) APP: UART RX line: hr=120,gest=FXXK[0m
+[0;32mI (272538) APP: UART RX line: hr=120,gest=fist[0m
+[0;32mI (273298) APP: UART RX line: hr=120,gest=FXXK[0m
+[0;32mI (273788) APP: UART RX line: hr=120,gest=fist[0m
+[0;32mI (274208) APP: UART RX line: hr=120,gest=FXXK[0m
+[0;32mI (275628) APP: UART RX line: hr=120,gest=Victory[0m
+[0;32mI (277038) APP: UART RX line: hr=120,gest=POINTING[0m
+[0;32mI (277198) APP: UART RX line: hr=120,gest=POINTING[0m
+[0;32mI (278518) APP: UART RX line: hr=120,gest=Victory[0m
+[0;32mI (278878) APP: UART RX line: hr=120,gest=POINTING[0m
+[0;32mI (280018) APP: UART RX line: hr=120,gest=Victory[0m
+[0;32mI (281498) APP: UART RX line: hr=120,gest=palm[0m
+[0;32mI (282098) APP: UART RX line: hr=111,gest=palm[0m
+[0;32mI (312858) APP: UART RX line: hr=111,gest=OK[0m
+[0;32mI (313758) APP: UART RX line: hr=111,gest=palm[0m
+[0;32mI (313888) APP: UART RX line: hr=111,gest=OK[0m
+[0;32mI (314528) APP: UART RX line: hr=111,gest=palm[0m
+[0;32mI (314718) APP: UART RX line: hr=111,gest=OK[0m
+[0;32mI (319198) APP: UART RX line: hr=110,gest=OK[0m
+[0;32mI (321058) APP: UART RX line: hr=110,gest=palm[0m
+[0;32mI (322268) APP: UART RX line: hr=94,gest=palm[0m
+[0;32mI (324458) APP: UART RX line: hr=90,gest=palm[0m
+[0;32mI (324878) APP: UART RX line: hr=89,gest=palm[0m
+[0;32mI (334388) APP: UART RX line: hr=89,gest=palm[0m
+[0;32mI (350258) APP: UART RX line: hr=101,gest=palm[0m
+[0;32mI (360128) APP: UART RX line: hr=104,gest=palm[0m
+[0;32mI (361328) APP: UART RX line: hr=98,gest=palm[0m
+[0;32mI (361628) APP: UART RX line: hr=99,gest=palm[0m
+[0;32mI (366458) APP: UART RX line: hr=107,gest=palm[0m
+[0;32mI (374988) APP: UART RX line: hr=106,gest=palm[0m
+[0;32mI (375898) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (380368) APP: UART RX line: hr=133,gest=palm[0m
+[0;32mI (384538) APP: UART RX line: hr=135,gest=palm[0m
+[0;32mI (385388) APP: UART RX line: hr=134,gest=palm[0m
+[0;32mI (387068) APP: UART RX line: hr=148,gest=palm[0m
+[0;32mI (387848) APP: UART RX line: hr=151,gest=palm[0m
+[0;32mI (402038) APP: UART RX line: hr=160,gest=palm[0m
+[0;32mI (402968) APP: UART RX line: hr=159,gest=palm[0m
+[0;32mI (406638) APP: UART RX line: hr=157,gest=palm[0m
+[0;32mI (408388) APP: UART RX line: hr=153,gest=palm[0m
+[0;32mI (415258) APP: UART RX line: hr=155,gest=palm[0m
+[0;32mI (416998) APP: UART RX line: hr=153,gest=palm[0m
+[0;32mI (419668) APP: UART RX line: hr=142,gest=palm[0m
+[0;32mI (419978) APP: UART RX line: hr=143,gest=palm[0m
+[0;32mI (421088) APP: UART RX line: hr=142,gest=palm[0m
+[0;32mI (422918) APP: UART RX line: hr=137,gest=palm[0m
+[0;32mI (423848) APP: UART RX line: hr=141,gest=palm[0m
+[0;32mI (424608) APP: UART RX line: hr=141,gest=palm[0m
+[0;32mI (425518) APP: UART RX line: hr=142,gest=palm[0m
+[0;32mI (429208) APP: UART RX line: hr=147,gest=palm[0m
+[0;32mI (430108) APP: UART RX line: hr=145,gest=palm[0m
+[0;32mI (431908) APP: UART RX line: hr=144,gest=palm[0m
+[0;32mI (432568) APP: UART RX line: hr=154,gest=palm[0m
+[0;32mI (434278) APP: UART RX line: hr=149,gest=palm[0m
+[0;32mI (436498) APP: UART RX line: hr=149,gest=palm[0m
+[0;32mI (437338) APP: UART RX line: hr=156,gest=palm[0m
+[0;32mI (439238) APP: UART RX line: hr=148,gest=palm[0m
+[0;32mI (439478) APP: UART RX line: hr=150,gest=palm[0m
+[0;32mI (441518) APP: UART RX line: hr=145,gest=palm[0m
+[0;32mI (607538) APP: UART RX line: hr=128,gest=palm[0m
+[0;32mI (607968) APP: UART RX line: hr=128,gest=OK[0m
+[0;32mI (608988) APP: UART RX line: hr=128,gest=palm[0m
+[0;32mI (610038) APP: UART RX line: hr=128,gest=OK[0m
+[0;32mI (610188) APP: UART RX line: hr=123,gest=OK[0m
+[0;32mI (611158) APP: UART RX line: hr=123,gest=palm[0m
+[0;32mI (611518) APP: UART RX line: hr=127,gest=palm[0m
+[0;32mI (612118) APP: UART RX line: hr=122,gest=palm[0m

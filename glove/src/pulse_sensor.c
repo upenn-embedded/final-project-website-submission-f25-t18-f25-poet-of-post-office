@@ -74,11 +74,11 @@ uint16_t PulseSensor_GetRawSignal(void)
 
 static void adc_init(uint8_t channel)
 {
-    ADMUX = (1 << REFS0);              // AVcc 参考电压
-    ADMUX |= (channel & 0x0F);         // 选择 ADC 通道 0~7
+    ADMUX = (1 << REFS0);              
+    ADMUX |= (channel & 0x0F);        
 
-    ADCSRA = (1 << ADEN)  |            // 使能 ADC
-             (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);  // 128 分频
+    ADCSRA = (1 << ADEN)  | 
+             (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); 
 }
 
 static void timer1_init(void)
@@ -86,21 +86,20 @@ static void timer1_init(void)
     TCCR1A = 0;
     TCCR1B = 0;
 
-    // 每 2ms 触发一次中断：16MHz / 64 = 250kHz, 2ms -> 500 计数
     OCR1A = 500 - 1; 
 
-    TCCR1B |= (1 << WGM12) | (1 << CS11) | (1 << CS10); // CTC + 64 分频
-    TIMSK1 |= (1 << OCIE1A);                            // 允许比较中断
+    TCCR1B |= (1 << WGM12) | (1 << CS11) | (1 << CS10); 
+    TIMSK1 |= (1 << OCIE1A);
 }
 
 ISR(TIMER1_COMPA_vect)
 {
     sampleCounter += PULSE_SAMPLE_PERIOD_MS;  
 
-    // 启动一次 ADC 转换
+
     ADCSRA |= (1 << ADSC);
 
-    // 等待转换完成
+
     while (ADCSRA & (1 << ADSC));
 
     uint16_t value = ADC;          
@@ -112,7 +111,7 @@ static void process_sample(uint16_t signal)
 {
     uint16_t N = sampleCounter;  
 
-    // 跟踪 trough / peak
+
     if (signal < thresh && signal < trough) {
         trough = signal;
     }
@@ -120,7 +119,7 @@ static void process_sample(uint16_t signal)
         peak = signal;
     }
 
-    // 心跳检测：最短间隔先限定 > 250ms
+
     if ((N - lastBeatTime) > 250) {
         if ((signal > thresh) && (Pulse == 0)) {
 
@@ -128,11 +127,9 @@ static void process_sample(uint16_t signal)
             IBI = N - lastBeatTime;
             lastBeatTime = N;
 
-            // -------- IBI 合理性判断（直接丢弃不合理脉冲）--------
-            // IBI 太短 -> HR 太高 (> ~170 bpm)
-            // IBI 太长 -> HR 太低 (< ~35 bpm)
+
             if (IBI < 320 || IBI > 2200) {
-                return; // 当噪声处理
+                return; 
             }
             // --------------------------------------------------
 
@@ -149,10 +146,10 @@ static void process_sample(uint16_t signal)
                 }
             }
 
-            // 当前振幅（peak - trough）过小也当作噪声
+
             uint16_t curAmp = (peak > trough) ? (peak - trough) : 0;
             if (curAmp < 20) {
-                // 基本是直流 + 少量抖动
+
                 return;
             }
 
@@ -168,19 +165,19 @@ static void process_sample(uint16_t signal)
             if (avg_IBI > 0) {
                 uint16_t bpm = (uint16_t)(60000UL / avg_IBI);
 
-                // 最终只接受 40~170 bpm，其他当无效
+
                 if (bpm >= 40 && bpm <= 170) {
                     g_bpm = bpm;
                     g_beat_flag = 1;  
                 }
-                // 否则不更新 g_bpm
+
             } else {
                 g_bpm = 0;
             }
         }
     }
 
-    // 脉冲结束：thresh 更新
+
     if ((signal < thresh) && (Pulse == 1)) {
         Pulse = 0;
         amp = peak - trough;          
@@ -191,7 +188,7 @@ static void process_sample(uint16_t signal)
         trough = thresh;
     }
 
-    // 超过 2500ms 没有检测到心跳，重置
+
     if ((N - lastBeatTime) > 2500) {  
         thresh     = 512;
         peak       = 512;

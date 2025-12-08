@@ -21,17 +21,15 @@
 #define FLEX2_THRESHOLD     300
 #define FLEX3_THRESHOLD     300
 
-/* ================= UART ================= */
-
 static void uart_init(void)
 {
     uint16_t ubrr = 103;              // 115200 @16MHz
     UBRR0H = (uint8_t)(ubrr >> 8);
     UBRR0L = (uint8_t)(ubrr & 0xFF);
 
-    // 开启 TX 和 RX
+
     UCSR0B = (1 << TXEN0) | (1 << RXEN0);
-    // 8N1
+
     UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
 }
 
@@ -46,10 +44,6 @@ static void uart_puts(const char *s)
     while (*s) uart_putc(*s++);
 }
 
-/* ================== ATmega -> ESP32 协议发送 ==================
- * 格式：
- *   hr=78,gest=fist\n
- * =========================================================== */
 
 static const char* gesture_to_name(uint8_t gesture)
 {
@@ -60,7 +54,7 @@ static const char* gesture_to_name(uint8_t gesture)
     } else if (gesture == 1) {
         return "ROCK";
     } else if (gesture == 2) {
-        return "G2";
+        return "OK";
     } else if (gesture == 3) {
         return "TAUNT";
     } else if (gesture == 4) {
@@ -85,13 +79,10 @@ static void send_status_to_esp(uint16_t bpm, uint8_t gesture)
     }
 }
 
-/* ================== ESP32 -> ATmega 协议接收 ==================
- * ESP32 发送：
- *   word=<name>\n
- * =========================================================== */
+
 
 #define UART_RX_BUF_SIZE 64
-static char   g_uart_rx_buf[UART_RX_BUF_SIZE];
+static char    g_uart_rx_buf[UART_RX_BUF_SIZE];
 static uint8_t g_uart_rx_pos = 0;
 
 static char g_last_word[16] = "none";
@@ -107,7 +98,7 @@ static void uart_handle_line(char* line)
     char* p = strstr(line, "word=");
     if (!p) return;
 
-    p += 5; // 跳过 "word="
+    p += 5; 
     char word[16] = {0};
     uint8_t i = 0;
     while (*p && *p != '\r' && *p != '\n' && i < sizeof(word) - 1) {
@@ -141,7 +132,7 @@ static void uart_rx_poll(void)
     }
 }
 
-/* ================= Flex ADC 读取 ================= */
+
 
 uint16_t flex_get_value(uint8_t adc_channel)
 {
@@ -162,7 +153,6 @@ uint16_t flex_get_value(uint8_t adc_channel)
     return (uint16_t)(sum / samples);
 }
 
-/* ================= WS2812 控制 ================= */
 
 static void ring_on(void)
 {
@@ -186,7 +176,7 @@ static void strip_off(void)
     ring_on();
 }
 
-/* 3bit 手势 0~7 -> LED 显示 */
+
 static void ApplyGestureLED(uint8_t gesture)
 {
     switch (gesture) {
@@ -231,7 +221,6 @@ static void ApplyGestureLED(uint8_t gesture)
     }
 }
 
-/* ================= main ================= */
 
 int main(void)
 {
@@ -241,40 +230,36 @@ int main(void)
     lcd_init();
     UI_Init();
 
-    // 你现在用的是 ADC4（PC4/A4），保持和接线一致
-    PulseSensor_Init(4);   /* 心率传感器 ADC4 */
+    PulseSensor_Init(4);   
 
-    uint8_t  last_gesture = 0xFF;
-    uint16_t last_bpm     = 0;
-    uint8_t  bpm_valid    = 0;
-    char buf[40];
+    uint8_t  last_gesture   = 0xFF;
+    uint16_t last_bpm       = 0;
+    uint8_t  bpm_valid      = 0;
+
+    uint16_t heart_anim_ms  = 0;
 
     while (1) {
 
-
-        /* ---------- 心率检测 + UI + 发送给 ESP32 ---------- */
         if (PulseSensor_IsBeat()) {
             uint16_t bpm = PulseSensor_GetBPM();
 
-            // 只接受 40~170 bpm，其他当噪声
             if (bpm >= 40 && bpm <= 170) {
                 last_bpm  = bpm;
                 bpm_valid = 1;
             } else {
-                // 超范围视为无效
+
                 bpm = 0;
             }
 
-            // UI：bpm==0 时会显示 "-- bpm"
             UI_OnHeartRateUpdated(bpm);
 
-            // 有过合法值时才发给 ESP32
+
             if (bpm_valid && last_gesture != 0xFF) {
                 send_status_to_esp(last_bpm, last_gesture);
             }
         }
 
-        /* ---------- Flex 读取 -> 3bit 手势 ---------- */
+
         uint16_t f1 = flex_get_value(FLEX1_ADC_CHANNEL);
         uint16_t f2 = flex_get_value(FLEX2_ADC_CHANNEL);
         uint16_t f3 = flex_get_value(FLEX3_ADC_CHANNEL);
@@ -290,14 +275,19 @@ int main(void)
             UI_OnGestureUpdated(gesture);
             last_gesture = gesture;
 
-            // 手势变化时也主动发一包状态
             if (bpm_valid) {
                 send_status_to_esp(last_bpm, last_gesture);
             }
         }
 
-        /* ---------- 轮询接收 ESP32 发来的 word=xxx ---------- */
+
         uart_rx_poll();
+
+        heart_anim_ms += 20;
+        if (heart_anim_ms >= 200) {
+            heart_anim_ms = 0;
+            UI_HeartbeatTick();
+        }
 
         _delay_ms(20);
     }

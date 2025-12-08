@@ -1,5 +1,3 @@
-// Auto-generated from tc_resnet8_int8.tflite
-// Do NOT edit manually.
 
 #include "model_data.h"
 

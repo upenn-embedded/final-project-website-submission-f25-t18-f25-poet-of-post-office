@@ -7,22 +7,19 @@
 #include "model_data.h"
 #include "esp_log.h"
 
-// TFLM 头文件 (来自 esp-tflite-micro 组件)
 #include "tensorflow/lite/micro/micro_interpreter.h"
 #include "tensorflow/lite/micro/micro_mutable_op_resolver.h"
 #include "tensorflow/lite/schema/schema_generated.h"
-// 注意：不要 include "tensorflow/lite/version.h"
+
 
 static const char* TAG = "KWS";
 
-// 类别名，顺序要和训练时候一致
 const char* g_kws_class_names[KWS_NUM_CLASSES] = {
     "Jarvis",
     "Other"
 };
 
-// Tensor arena 大小，根据模型大小可适当调节
-// 如果后面还报 AllocateTensors failed，可以再往上加一点
+
 constexpr int kTensorArenaSize = 100 * 1024;
 static uint8_t g_tensor_arena[kTensorArenaSize];
 
@@ -41,28 +38,27 @@ bool kws_init(void)
         return false;
     }
 
-    // 注册用到的算子（根据模型结构增减）
-    // 这里多预留几个，避免一次次改
+
     static tflite::MicroMutableOpResolver<15> resolver;
 
-    // 卷积相关
+
     resolver.AddConv2D();
     resolver.AddDepthwiseConv2D();
-    // 池化
+
     resolver.AddMaxPool2D();
-    // 全连接
+
     resolver.AddFullyConnected();
-    // 展平 / reshape
+
     resolver.AddReshape();
-    // 激活 / 后处理
+
     resolver.AddSoftmax();
-    resolver.AddRelu();          // 以防模型里用了 ReLU
-    // 一些常见的 elementwise
+    resolver.AddRelu();   
+
     resolver.AddMul();
     resolver.AddAdd();
-    // 形状 / 切片 / pad 之类的辅助 op
-    resolver.AddShape();         // ← 关键：解决你现在的 SHAPE 报错
-    resolver.AddStridedSlice();  // 展平/切片时常用
+
+    resolver.AddShape(); 
+    resolver.AddStridedSlice(); 
     resolver.AddPad();
     resolver.AddPack();      
     resolver.AddMean();  
@@ -104,12 +100,12 @@ bool kws_infer_one(const float* features,
         return false;
     }
 
-    // 计算 input tensor 的元素个数
+
     int expected_len = 1;
     for (int i = 0; i < g_input->dims->size; ++i) {
         expected_len *= g_input->dims->data[i];
     }
-    // 例如 [1, 49, 40, 1] → 1960
+
 
     if (feature_len != expected_len) {
         ESP_LOGW(TAG, "feature_len=%d, but input tensor expects %d",
@@ -121,7 +117,6 @@ bool kws_infer_one(const float* features,
         return false;
     }
 
-    // 量化 features -> int8
     float in_scale = g_input->params.scale;
     int   in_zp    = g_input->params.zero_point;
     int8_t* in_data = g_input->data.int8;
@@ -135,18 +130,17 @@ bool kws_infer_one(const float* features,
         if (q > 127)  q = 127;
         in_data[i] = (int8_t)q;
     }
-    // 剩余的补零点
+
     for (int i = copy_len; i < expected_len; ++i) {
         in_data[i] = (int8_t)in_zp;
     }
 
-    // 推理
+
     if (g_interpreter->Invoke() != kTfLiteOk) {
         ESP_LOGE(TAG, "Invoke() failed");
         return false;
     }
 
-    // 输出反量化
     float out_scale = g_output->params.scale;
     int   out_zp    = g_output->params.zero_point;
     int8_t* out_q   = g_output->data.int8;
@@ -161,7 +155,7 @@ bool kws_infer_one(const float* features,
     float max_score  = -1e9f;
 
     for (int i = 0; i < num_classes; ++i) {
-        float p = (out_q[i] - out_zp) * out_scale;  // softmax 概率
+        float p = (out_q[i] - out_zp) * out_scale; 
         if (out_scores && i < KWS_NUM_CLASSES) {
             out_scores[i] = p;
         }

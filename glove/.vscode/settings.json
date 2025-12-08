@@ -1,5 +1,5 @@
 {
-    "idf.portWin": "COM8",
+    "idf.portWin": "COM15",
     "files.associations": {
         "stdint.h": "c"
     }

@@ -2,31 +2,30 @@
 
 static const char* TAG = "wifi_conn";
 
-#define AP_SSID "CatFeeder_Setup"
+#define AP_SSID "Glove_Setup"
 #define AP_PASS "12345678"
-#define STA_TRY_MS 8000 // 每次尝试连接的最长时间
+#define STA_TRY_MS 8000 
 #define MAX_SSID 256
 #define MAX_PASS 256
 
-// 待切换的 SSID/密码缓存（由 /provision 填，wifi_switch_task 读取）
+
 static char g_pending_ssid[MAX_SSID + 1] = {0};
 static char g_pending_pass[MAX_PASS + 1] = {0};
 
-// 全局上下文，集中保存 Wi-Fi/HTTP 状态
+
 typedef struct {
-  wifi_conn_state_t state;      // 当前连接状态（STA尝试中/STA成功/SoftAP）
-  esp_ip4_addr_t ip;            // 如果 STA 成功，存储获取到的 IP
-  wifi_conn_cb_t cb;            // 状态变化时的回调函数
-  void* cb_user;                // 回调的用户数据
-  httpd_handle_t httpd;         // SoftAP 模式下启动的 HTTP server 句柄
-  EventGroupHandle_t evt;       // FreeRTOS EventGroup，用于等待“是否连上IP”
+  wifi_conn_state_t state;
+  esp_ip4_addr_t ip;   
+  wifi_conn_cb_t cb;  
+  void* cb_user;             
+  httpd_handle_t httpd;     
+  EventGroupHandle_t evt;     
 } wifi_ctx_t;
 
-static wifi_ctx_t g = {0};      // 全局唯一实例
-#define WIFI_OK_BIT BIT0        // EventGroup 里的标志位：表示 STA 成功拿到 IP
+static wifi_ctx_t g = {0};  
+#define WIFI_OK_BIT BIT0       
 
-//wifi账号密码存取
-//保存SSID/密码到 NVS
+
 static void nvs_save_creds(const char *ssid, const char *pass) {
     nvs_handle_t h;
     if (nvs_open("wifi",NVS_READWRITE,&h)!=ESP_OK) {
@@ -39,7 +38,7 @@ static void nvs_save_creds(const char *ssid, const char *pass) {
     nvs_close(h);
 }
 
-// 从 NVS 读取 SSID/密码
+
 static bool nvs_load_creds(char *ssid, size_t ssid_sz, char *pass, size_t pass_sz) {
     nvs_handle_t h;
     if (nvs_open("wifi",NVS_READONLY,&h)!=ESP_OK) {
@@ -53,7 +52,7 @@ static bool nvs_load_creds(char *ssid, size_t ssid_sz, char *pass, size_t pass_s
     return (e1==ESP_OK && e2==ESP_OK && ssid[0]);
 }
 
-// 清除 NVS 里保存的 SSID/密码
+
 static void nvs_erase_creds(void) {
     nvs_handle_t h;
     if (nvs_open("wifi",NVS_READWRITE,&h)!=ESP_OK) {
@@ -67,8 +66,7 @@ static void nvs_erase_creds(void) {
 }
 
 
-//--------SoftAP/STA模式切换相关--------//
-// 启动 SoftAP 模式
+
 static void start_ap(void){
     wifi_config_t ap={0};
     strcpy((char*)ap.ap.ssid,AP_SSID);
@@ -98,7 +96,7 @@ static void test_esp_event_cb(void* arg, esp_event_base_t event_base, int32_t ev
     }
 }
 
-//尝试启动STA模式连接
+
 static bool try_sta_once(const char* ssid, const char* pass, int wait_ms){
     esp_event_handler_instance_t wifi_event_handler;
     esp_event_handler_instance_register(WIFI_EVENT,ESP_EVENT_ANY_ID,test_esp_event_cb,NULL,&wifi_event_handler);
@@ -123,7 +121,7 @@ static bool try_sta_once(const char* ssid, const char* pass, int wait_ms){
     return (bits & WIFI_OK_BIT);
 }
 
-//-------配网HTTP页面相关-------//
+
 
 static httpd_handle_t http_start(void);
 static void http_stop(void);
@@ -131,7 +129,7 @@ static void wifi_switch_task(void* arg);
 
 static const char *HTML_INDEX =
 "<!doctype html><meta charset=utf-8>"
-"<title>CatFeeder Wi-Fi Setup</title>"
+"<title>Glove Wi-Fi Setup</title>"
 "<body style='font-family:sans-serif;max-width:480px;margin:2rem auto'>"
 "<h2>Connect to Wi-Fi</h2>"
 "<label>SSID：<select id=s></select></label><br><br>"
@@ -161,16 +159,16 @@ static esp_err_t scan_get(httpd_req_t *req){
     ESP_ERROR_CHECK(esp_wifi_scan_get_ap_num(&n));
     wifi_ap_record_t *aps=calloc(n,sizeof(*aps));
     ESP_ERROR_CHECK(esp_wifi_scan_get_ap_records(&n,aps));
-    char *buf = malloc(1024); // 足够大
+    char *buf = malloc(1024); 
     size_t off=0; int added=0; buf[off++]='[';
     for (int i=0; i<n; ++i){
-        if (aps[i].primary<1 || aps[i].primary>14) continue;    // 只要 2.4G
+        if (aps[i].primary<1 || aps[i].primary>14) continue; 
         const char* s=(const char*)aps[i].ssid; if(!s||!s[0]) continue;
         bool dup=false;
         for (int j=0;j<i;j++){
             if(strcmp((char*)aps[j].ssid,s)==0 && aps[j].primary<=14){ dup=true; break; }}
             if (dup) continue;
-            if (off+strlen(s)+4>=1000) break; // 防止溢出
+            if (off+strlen(s)+4>=1000) break; 
             if (added++) buf[off++]=',';
             off+=sprintf(buf+off,"\"%s\"",s);
     }
@@ -225,16 +223,16 @@ static esp_err_t provision_post (httpd_req_t *req){
     strncpy(g_pending_ssid, ssid, sizeof(g_pending_ssid) - 1);
     strncpy(g_pending_pass, pass, sizeof(g_pending_pass) - 1);
     BaseType_t created = xTaskCreate(
-        wifi_switch_task,    // 任务函数
-        "wifi_switch",       // 任务名（调试可见）
-        4096,                // 栈大小（字节数，够用了；若 TLS/更多日志可加大）
-        NULL,                // 参数
-        5,                   // 优先级（略高于 httpd 默认优先级即可）
-        NULL                 // 不需要拿句柄
+        wifi_switch_task,   
+        "wifi_switch",       
+        4096,                
+        NULL,               
+        5,                  
+        NULL                 
     );
     if (created != pdPASS) {
         ESP_LOGE(TAG, "Failed to create wifi_switch task");
-    // 兜底：如果任务没创建成功，至少不要在 httpd 线程里 stop
+   
     
     }
     return ESP_OK;
@@ -243,7 +241,7 @@ static esp_err_t provision_post (httpd_req_t *req){
 
 
 static httpd_handle_t http_start(void){
-    if (g.httpd) return g.httpd; // 已经启动
+    if (g.httpd) return g.httpd; 
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     if (httpd_start(&g.httpd,&config)==ESP_OK){
         httpd_uri_t u1={.uri="/", .method=HTTP_GET, .handler=index_get};
@@ -270,21 +268,20 @@ static void http_stop(void){
 static void wifi_switch_task(void* arg){
     vTaskDelay(pdMS_TO_TICKS(250));
     ESP_LOGI(TAG,"Switching to STA mode SSID=%s ...", g_pending_ssid);
-    http_stop();            // 停止配网HTTP（避免端口冲突）
+    http_stop();           
     esp_wifi_stop();
     if (try_sta_once(g_pending_ssid, g_pending_pass, 10000)) {
         g.state = WIFI_CONN_STA_OK;
         ESP_LOGI(TAG, "STA connected, IP=" IPSTR, IP2STR(&g.ip));
         if (g.cb) g.cb(g.state, g.cb_user);
-        // 可选：此处启动“正常工作”的 HTTP（/ping /echo …）
-        // start_http_server_normal();
+  
     } else {
         ESP_LOGW(TAG, "Connect failed, back to AP portal");
         start_ap();
-        http_start();  // 重新开启配网页面
+        http_start(); 
     }
 
-    // 4) 清理并退出任务
+  
     memset(g_pending_ssid, 0, sizeof(g_pending_ssid));
     memset(g_pending_pass, 0, sizeof(g_pending_pass));
     vTaskDelete(NULL);
@@ -292,7 +289,7 @@ static void wifi_switch_task(void* arg){
 }
 
 
-// ---- 事件 ----
+
 static void on_got_ip(void* arg, esp_event_base_t base, int32_t id, void* data){
   ip_event_got_ip_t* e = (ip_event_got_ip_t*)data;
   g.ip = e->ip_info.ip;
@@ -304,7 +301,7 @@ static void on_sta_disc(void* arg, esp_event_base_t base, int32_t id, void* data
   ESP_LOGW(TAG, "STA_DISCONNECTED reason=%d", e->reason);
 }
 
-//-------对外API-------//
+
 void wifi_conn_init(wifi_conn_cb_t cb, void* user){
   g.cb = cb; g.cb_user = user; g.state = WIFI_CONN_IDLE;
   ESP_ERROR_CHECK(nvs_flash_init());
@@ -326,13 +323,13 @@ void wifi_conn_start(void){
   char ssid[MAX_SSID+1]={0}, pass[MAX_PASS+1]={0};
   bool has = nvs_load_creds(ssid,sizeof(ssid), pass,sizeof(pass));
   if (!has) {
-    // 没有已保存凭据 -> 直接AP配网
+
     start_ap();
     http_start();
     return;
   }
 
-  // 用已保存凭据尝试连网
+
   if (try_sta_once(ssid, pass, STA_TRY_MS)) {
     g.state = WIFI_CONN_STA_OK; if (g.cb) g.cb(g.state, g.cb_user);
   } else {
